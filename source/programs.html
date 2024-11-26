@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Подбор программы</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page__body">
+  <header class="header">
+    <h1 class="visually-hidden">Магазин питания для кошек Cat energy</h1>
+    <nav class="navigation header__site-navigation">
+      <a class="navigation__logo-link" href="#">
+        <img src="#" alt="Лого магазина">
+      </a>
+      <a class="navigation__logo-link" href="#">
+        <img src="#" alt="Название магазина">
+      </a>
+      <ul class="navigation__categories-list">
+        <li class="navigation__categories-item navigation__categories-item--active"></li>
+        <li class="navigation__categories-item"></li>
+        <li class="navigation__categories-item"></li>
+      </ul>
+    </nav>
+    <button class="burger-button navigation__button-close" type="button"></button>
+  </header>
+  <main class="page__main page__main--programs">
+    <section class="programs">
+      <h1 class="visually-hidden">Программы питания</h1>
+      <p class="title title--main">Подбор программы</p>
+      <p class="text text--bold">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+      <form class="programs-choose" action="#" method="get">
+        <div class="programs-choose__wrapper">
+          <label class="programs-choose__label">Имя:*
+            <input class="programs-choose__input" name="name" type="name">
+          </label>
+          <label class="programs-choose__label">Вес (кг):*
+            <input class="programs-choose__input" name="weight" type="text">
+          </label>
+          <label class="programs-choose__label">Возраст (лет):
+            <input class="programs-choose__input" name="old" type="text">
+          </label>
+        </div>
+        <fieldset class="programs-choose__fieldset">
+          <legend class="visually-hidden">Цель программы</legend>
+          <ul class="programs-choose__list">
+            <li class="programs-choose__radio-item">
+              <label class="programs-choose__label programs-choose__label--radio">
+                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight-loss" checked>
+                похудение
+                <span class="programs-choose__radio-mark"></span>
+              </label>
+            </li>
+            <li class="programs-choose__radio-item">
+              <label class="programs-choose__label programs-choose__label--radio">
+                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight-loss" checked>
+                Набор массы
+                <span class="programs-choose__radio-mark"></span>
+              </label>
+            </li>
+            <li class="programs-choose__radio-item">
+              <label class="programs-choose__label programs-choose__label--radio">
+                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight-loss" checked>
+                Не знаю (Нужен ваш совет)
+                <span class="programs-choose__radio-mark"></span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="programs-choose__fieldset">
+          <legend class="programs-choose__title title title--midle">
+            Контактные данные
+            (владельца кота)
+          </legend>
+          <label class="programs-choose__label">E-mail:*
+            <input class="programs-choose__input" type="mail" name="mail">
+          </label>
+          <label class="programs-choose__label">Телефон:*
+            <input class="programs-choose__input" type="text" name="phone-number">
+          </label>
+        </fieldset>
+        <fieldset class="programs-choose__fieldset">
+          <legend class="programs-choose__title">Комментарий</legend>
+          <textarea class="programs-choose__textarea" name="cat-about">Расскажите обо всех повАдках кота</textarea>
+        </fieldset>
+        <fieldset class="programs-choose__fieldset">
+          <legend class="programs-choose__title">
+            Дополнительно
+          </legend>
+          <ul class="programs-choose__list programs-choose__list--check">
+            <li class="programs-choose__item">
+              <label class="programs-choose__label programs-choose__label--checkbox">
+                <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="no-sugar" checked>
+                сахарозаменитель
+                <span class="programs-choose__checkbox-mark"></span>
+              </label>
+            </li>
+            <li class="programs-choose__item">
+              <label class="programs-choose__label programs-choose__label--checkbox">
+                <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="water" checked>
+                питьевая вода
+                <span class="programs-choose__checkbox-mark"></span>
+              </label>
+            </li>
+            <li class="programs-choose__item">
+              <label class="programs-choose__label programs-choose__label--checkbox">
+                <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="milk" checked>
+                молоко
+                <span class="programs-choose__checkbox-mark"></span>
+              </label>
+            </li>
+            <li class="programs-choose__item">
+              <label class="programs-choose__label programs-choose__label--checkbox">
+                <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="vitamins" checked>
+                витамины
+                <span class="programs-choose__checkbox-mark"></span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <input class="programs-choose__submit" value="отправить заявку" type="submit">
+        <p class="programs-choose__about-button text text--small">
+          * — Обязательные поля
+        </p>
+      </form>
+    </section>
+  </main>
+  <footer class="page__footer footer">
+    <section class="location location--catalog">
+      <h2 class="visually-hidden">Наше местонахождение</h2>
+      <div>
+        <p class="text text--bold location__invite">приглашаем к сотрудничеству дилеров!</p>
+        <p class="text text--middle location__adress">ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург</p>
+      </div>
+      <img src="#" alt="Схема местонахождения">
+    </section>
+    <div class="footer__wrapper">
+      <a class="footer__logo-link" href="#">
+        <img class="footer__logo-img" src="#" alt="Логотип">
+      </a>
+      <ul class="footer__socials-list socials">
+        <li class="socials__item">
+          <a class="socials__link socials__link--vk" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link socials__link--youtube" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link socials__link--tg" href="#"></a>
+        </li>
+      </ul>
+      <a class="footer__wrapper-link" href="#">HTML Academy</a>
+    </div>
+  </footer>
+</body>
+
+</html>
