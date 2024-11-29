@@ -11,7 +11,7 @@
 
 <body class="page__body">
   <header class="header">
-    <h1 class="visually-hidden">Магазин питания для кошек Cat energy</h1>
+    <h2 class="visually-hidden">Магазин питания для кошек Cat energy</h2>
     <nav class="navigation header__site-navigation">
       <a class="navigation__logo-link" href="#">
         <img src="#" alt="Лого магазина">
@@ -24,36 +24,37 @@
         <li class="navigation__categories-item"></li>
         <li class="navigation__categories-item"></li>
       </ul>
+      <button class="burger-button navigation__button-close" type="button"></button>
     </nav>
-    <button class="burger-button navigation__button-close" type="button"></button>
   </header>
   <main class="page__main page__main--catalog">
     <section class="products">
-      <h2 class="title title--main">
+      <h1 class="title title--main">
         Каталог продукции
-      </h2>
+      </h1>
       <ul class="products__list">
         <li class="products__item">
-          <h3 class="products__item-title">
+          <a class="products__item-title" href="#">
             Cat Energy
             PRO
             500 г
-          </h3>
-          <img src="#" alt="Cat energy с курицей 500г">
+          </a>
+          <a class="products__img-wrapper" href="#">
+            <img class="products__product-image" src="#" alt="Cat energy с курицей 500г">
+          </a>
           <div class="products__characteristics text text--small">
             <p class="products__characteristics-name">Масса<span class="products__characteristics-meaning ">500 г</span></p>
             <p class="products__characteristics-name">Вкус<span class="products__characteristics-meaning ">Курица</span></p>
             <p class="products__characteristics-name">Цена<span class="products__characteristics-meaning ">700 ₽</span></p>
           </div>
-          <button class="link link--green products__item-button" type="button">Заказать</button>
+          <a class="link link--green products__item-button" href="#">Заказать</a>
         </li>
         <li class="products__item products__item--more">
           <p class="products__item-title">
             Показать еще 100500 товаров
           </p>
           <p class="text text--small products__item-more-description"></p>
-          </div>
-          <button class="link link--grey products__item-button" type="button">Показать всё</button>
+          <a class="link link--grey products__item-button" href="#">Показать всё</a>
         </li>
       </ul>
     </section>
@@ -65,15 +66,16 @@
         <li class="additional-goods__item">
           <h3 class="title title--midle additional-goods__title">Сахарозаменитель</h3>
           <p class="text text--small additional-goods__description">1 упаковка (100 г) <span class="additional-goods__description-meaning">200 ₽</span></p>
+          <a class="link link--green additional-goods__list-button" href="#">Заказать</a>
         </li>
       </ul>
-      <footer class="additional-goods__footer">
+      <div class="additional-goods__footer">
         <p class="text text--middle additional-goods__footer-description">
           Закажите все
           и получите чехол для
           кота в подарок!
         </p>
-      </footer>
+      </div>
     </section>
     <section class="promotions">
       <h2 class="title title--section promotions__title">Акции и новинки</h2>
@@ -81,7 +83,7 @@
       <form class="promotions__subscribe-form" action="#" method="get">
         <label class="visually-hidden" for="subscribe-mail">email:</label>
         <input class="promotions__subscribe-input" type="email" id="subscribe-mail" name="email">
-        <button class="link link--green promotions__button" type="button">Подписаться</button>
+        <button class="link link--green promotions__button" type="submit">Подписаться</button>
       </form>
     </section>
   </main>

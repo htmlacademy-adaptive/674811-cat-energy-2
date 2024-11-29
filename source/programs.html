@@ -11,7 +11,7 @@
 
 <body class="page__body">
   <header class="header">
-    <h1 class="visually-hidden">Магазин питания для кошек Cat energy</h1>
+    <h2 class="visually-hidden">Магазин питания для кошек Cat energy</h2>
     <nav class="navigation header__site-navigation">
       <a class="navigation__logo-link" href="#">
         <img src="#" alt="Лого магазина">
@@ -24,25 +24,24 @@
         <li class="navigation__categories-item"></li>
         <li class="navigation__categories-item"></li>
       </ul>
+      <button class="burger-button navigation__button-close" type="button"></button>
     </nav>
-    <button class="burger-button navigation__button-close" type="button"></button>
   </header>
   <main class="page__main page__main--programs">
     <section class="programs">
-      <h1 class="visually-hidden">Программы питания</h1>
-      <p class="title title--main">Подбор программы</p>
+      <h1 class="title title--main">Подбор программы</h1>
       <p class="text text--bold">Заполните анкету, и мы подберем
         программу питания для вашего кота</p>
-      <form class="programs-choose" action="#" method="get">
+      <form class="programs-choose" action="#" method="post">
         <div class="programs-choose__wrapper">
           <label class="programs-choose__label">Имя:*
-            <input class="programs-choose__input" name="name" type="name">
+            <input class="programs-choose__input" name="name" type="text">
           </label>
           <label class="programs-choose__label">Вес (кг):*
-            <input class="programs-choose__input" name="weight" type="text">
+            <input class="programs-choose__input" name="weight" type="number">
           </label>
           <label class="programs-choose__label">Возраст (лет):
-            <input class="programs-choose__input" name="old" type="text">
+            <input class="programs-choose__input" name="old" type="number">
           </label>
         </div>
         <fieldset class="programs-choose__fieldset">
@@ -50,21 +49,21 @@
           <ul class="programs-choose__list">
             <li class="programs-choose__radio-item">
               <label class="programs-choose__label programs-choose__label--radio">
-                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight-loss" checked>
+                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight" value="weight loss" checked>
                 похудение
                 <span class="programs-choose__radio-mark"></span>
               </label>
             </li>
             <li class="programs-choose__radio-item">
               <label class="programs-choose__label programs-choose__label--radio">
-                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight-loss" checked>
+                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight" value="weight gain">
                 Набор массы
                 <span class="programs-choose__radio-mark"></span>
               </label>
             </li>
             <li class="programs-choose__radio-item">
               <label class="programs-choose__label programs-choose__label--radio">
-                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight-loss" checked>
+                <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight" value="need help">
                 Не знаю (Нужен ваш совет)
                 <span class="programs-choose__radio-mark"></span>
               </label>
@@ -77,15 +76,15 @@
             (владельца кота)
           </legend>
           <label class="programs-choose__label">E-mail:*
-            <input class="programs-choose__input" type="mail" name="mail">
+            <input class="programs-choose__input" type="email" name="mail">
           </label>
           <label class="programs-choose__label">Телефон:*
-            <input class="programs-choose__input" type="text" name="phone-number">
+            <input class="programs-choose__input" type="tel" name="phone-number">
           </label>
         </fieldset>
         <fieldset class="programs-choose__fieldset">
           <legend class="programs-choose__title">Комментарий</legend>
-          <textarea class="programs-choose__textarea" name="cat-about">Расскажите обо всех повАдках кота</textarea>
+          <textarea class="programs-choose__textarea" name="cat-about" placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
         <fieldset class="programs-choose__fieldset">
           <legend class="programs-choose__title">
@@ -122,7 +121,7 @@
             </li>
           </ul>
         </fieldset>
-        <input class="programs-choose__submit" value="отправить заявку" type="submit">
+        <button class="programs-choose__submit" value="отправить заявку" type="submit"></button>
         <p class="programs-choose__about-button text text--small">
           * — Обязательные поля
         </p>
