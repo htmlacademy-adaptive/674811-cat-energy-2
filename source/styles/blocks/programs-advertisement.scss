@@ -1,3 +1,27 @@
 .programs-advertisement {
+  background-image: linear-gradient(to bottom, rgba(104, 184, 56, 0.85) 302px, $white 302px), url("../../images/index-background-mobile@2x.jpg");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 27px;
+  margin-bottom: 20px;
+}
 
+.programs-advertisement__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.programs-advertisement__slogan {
+  margin-top: 0;
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.programs-advertisement__image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }

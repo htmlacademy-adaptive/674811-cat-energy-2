@@ -1,1 +1,21 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
