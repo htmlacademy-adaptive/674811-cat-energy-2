@@ -5,17 +5,20 @@
   font-size: 20px;
   line-height: 20px;
   background-color: $white;
+
+  @media screen and (max-width: $mobile-only-width) {
+    &--close {
+      .navigation__categories-list {
+        display: none;
+      }
+    }
+  }
 }
 
 .navigation__categories-list {
-  display: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list;
 
-  &--active {
-    display: block;
-  }
+  display: block;
 }
 
 .navigation__categories-item {
@@ -37,13 +40,19 @@
 
   &--logo {
     display: grid;
+    width: calc(100% - 50px);
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 60px 1fr;
     align-items: center;
     padding: 13px 20px 15px;
   }
 }
 
 .navigation__logo-img-words {
+  display: block;
   justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

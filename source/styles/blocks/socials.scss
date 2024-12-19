@@ -1,3 +1,35 @@
 .socials {
 
 }
+
+.socials__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 28px;
+    height: 22px;
+    background-color: #666666;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--vk {
+    &::after {
+      mask-image: url("../../icons/stack.svg#footer-icon-vk");
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-color: $green-basic;
+    }
+  }
+}

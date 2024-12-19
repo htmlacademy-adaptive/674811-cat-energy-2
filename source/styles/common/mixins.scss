@@ -7,3 +7,9 @@
     src: $font-src;
   }
 }
+
+@mixin list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}

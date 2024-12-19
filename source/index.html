@@ -12,7 +12,7 @@
 <body class="page__body">
   <header class="header">
     <h1 class="visually-hidden">Магазин питания для кошек Cat energy</h1>
-    <nav class="navigation header__site-navigation">
+    <nav class="navigation navigation--close header__site-navigation">
       <a class="navigation__menu-link navigation__menu-link--logo" href="#">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/header-logo-desktop.svg" width="202" height="59">
@@ -39,7 +39,9 @@
           </a>
         </li>
       </ul>
-      <button class="burger-button navigation__button-close" type="button" aria-label="Закрыть меню"></button>
+      <button class="burger-button navigation__button-close" type="button" aria-label="Закрыть меню">
+        <span class="burger-button__strip"></span>
+      </button>
     </nav>
   </header>
   <main class="page__main">
@@ -134,8 +136,10 @@
       </picture>
     </section>
     <div class="footer__wrapper">
-      <a class="footer__logo-link" href="#">
-        <img class="footer__logo-img" src="./images/footer-logo-words.svg" width="128" height="24" alt="Название магазина">
+      <a class="footer__logo-link" href="#" aria-label="Название магазина">
+        <svg width="128" height="24" viewBox="0 0 128 24" role="img">
+          <use href="./icons/stack.svg#footer-logo-words"></use>
+        </svg>
       </a>
       <ul class="footer__socials-list socials">
         <li class="socials__item">
