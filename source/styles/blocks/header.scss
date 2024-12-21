@@ -1,3 +1,20 @@
 .header {
   color: #ffffff;
 }
+
+.header__site-navigation {
+  @include tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 65px;
+  }
+
+  @include tablet {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  @include desktop {
+    margin-bottom: 110px;
+  }
+}

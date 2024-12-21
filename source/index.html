@@ -22,7 +22,6 @@
         <img class="navigation__logo-img-words" src="./images/header-logo-mobile-words.svg" width="101" height="18" alt="Название магазина">
       </a>
       <ul class="navigation__categories-list">
-        <!-- Класс для выпадения меню-навигации "navigation__categories-list--active" -->
         <li class="navigation__categories-item navigation__categories-item--active">
           <a class="navigation__menu-link" href="#">
             Главная
@@ -46,14 +45,16 @@
   </header>
   <main class="page__main">
     <section class="programs-advertisement">
-      <h2 class="title title--section title--main-index programs-advertisement__title">Функциональное питание для котов</h2>
-      <p class="text text--main-slogan programs-advertisement__slogan">Занялся собой? Займись котом!</p>
-      <picture>
-        <source type="image/jpeg" media="(min-width: 1440px)" srcset="./images/index-main-can-desktop@1x.png 1x, ./images/index-main-can-desktop@2x.png 2x" width="552" height="499">
-        <source type="image/jpeg" media="(min-width: 768px)" srcset="./images/index-main-can-tablet@1x.png 1x, ./images/index-main-can-tablet@2x.png 2x" width="709" height="609">
-        <img class="programs-advertisement__image" src="./images/index-main-can-mobile@1x.png" srcset="./images/index-main-can-mobile@2x.png 2x" width="280" height="270" alt="Cat energy с курицей">
-      </picture>
-      <a class="link link--green programs-advertisement__button container" href="#">Подобрать программу</a>
+      <div class="programs-advertisement__wrapper">
+        <h2 class="title title--section title--main-index programs-advertisement__title">Функциональное питание для котов</h2>
+        <p class="text text--main-slogan programs-advertisement__slogan">Занялся собой? Займись котом!</p>
+        <picture>
+          <source type="image/jpeg" media="(min-width: 1440px)" srcset="./images/index-main-desktop@1x.png 1x, ./images/index-main-desktop@2x.png 2x" width="552" height="499">
+          <source type="image/jpeg" media="(min-width: 768px)" srcset="./images/index-main-can-tablet@1x.jpg 1x, ./images/index-main-can-tablet@2x.jpg 2x" width="709" height="609">
+          <img class="programs-advertisement__image" src="./images/index-main-can-mobile@1x.png" srcset="./images/index-main-can-mobile@2x.png 2x" width="280" height="270" alt="Cat energy с курицей">
+        </picture>
+        <a class="link link--green link--main-index programs-advertisement__button" href="#">Подобрать программу</a>
+      </div>
     </section>
     <section class="modes container">
       <h2 class="visually-hidden">Режимы похудения</h2>

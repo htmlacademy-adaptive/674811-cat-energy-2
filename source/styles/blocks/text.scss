@@ -7,6 +7,12 @@
     font-size: 14px;
     line-height: 14px;
     margin-bottom: 29px;
+
+    @include tablet {
+      color: $black-full;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--small {

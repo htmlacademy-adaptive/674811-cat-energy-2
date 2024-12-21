@@ -2,11 +2,17 @@
 /* Переменные шрифтов */
 $font-primary: "Oswald", "Arial", sans-serif;
 $font-secondary: "Lato", "Arial", sans-serif;
+
 /* Ширины экранов */
-$mobile-only-width: 767px;
+//mobile
 $mobile-width: 320px;
+$mobile-only-width: 767px;
+//tablet
 $tablet-width: 768px;
+$tablet-only-width: 1439px;
+//desktop
 $desktop-width: 1440px;
+
 /* Перменные цветов */
 //green
 $green-basic: #68b738;
@@ -19,3 +25,4 @@ $grey-light-border: #d9d9d9;
 $grey-basic: #f2f2f2;
 $grey-light: #e6e6e6;
 $grey-dark-light: #444444;
+$grey-img-background: #4E4D53;

@@ -5,10 +5,12 @@
   &--section {
     line-height: 36px;
     font-size: 36px;
-  }
 
-  &--main-index {
-    color: $white;
+    @include tablet {
+      text-align: left;
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   &--middle {
@@ -16,5 +18,11 @@
     line-height: 37px;
     text-transform: uppercase;
     color: $black-full;
+  }
+
+  &--main-index {
+    @include mobile-only {
+      color: $white;
+    }
   }
 }
