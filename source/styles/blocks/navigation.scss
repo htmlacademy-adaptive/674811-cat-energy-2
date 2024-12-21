@@ -53,13 +53,15 @@
 
 .navigation__categories-item--active {
   &::before {
-    @include pseudo;
-    display: block;
-    background-color: $green-basic;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
+    @include tablet {
+      @include pseudo;
+      display: block;
+      background-color: $green-basic;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+    }
 
     @include desktop {
       background-color: $white;
@@ -112,3 +114,62 @@
     display: none;
   }
 }
+
+
+.navigation__button-close {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: $white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  padding: 0;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.navigation__button-close-strip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: $black-full;
+}
+
+.navigation__button-close::before,
+.navigation__button-close::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: $black-full;
+}
+
+.navigation__button-close::before {
+  top: calc(50% - 1px);
+}
+
+.navigation__button-close::after {
+  bottom: 0;
+}
+
+/* Для JS
+.navigation__button-close:active::before {
+  transform: rotate(45deg);
+  transition: transform 0.3s 0.15s;
+}
+
+.navigation__button-close..navigation__button-close--active::after {
+  transform: rotate(-45deg);
+  transition: transform 0.3s 0.15s;
+}
+*/

@@ -1,20 +1,39 @@
 .header {
   color: #ffffff;
+
+  &::after {
+    @include pseudo;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 730px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @include desktop {
+      background-image: linear-gradient(to right, $white 50%, rgba(104, 184, 56, 0.85) 50%), url("../../images/index-background-desktop@2x.png");
+      background-color: $grey-img-background;
+      background-position-x: right;
+      background-position-y: top;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .header__site-navigation {
   @include tablet {
+    padding-top: 25px;
     padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 65px;
   }
 
-  @include tablet {
+  @include desktop {
+    padding-top: 55px;
     padding-left: 110px;
     padding-right: 110px;
-  }
-
-  @include desktop {
     margin-bottom: 110px;
   }
 }

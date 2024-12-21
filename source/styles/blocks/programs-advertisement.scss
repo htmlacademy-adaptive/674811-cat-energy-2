@@ -8,6 +8,10 @@
   padding-top: 27px;
   margin-bottom: 20px;
 
+  @include mobile-only {
+    background-color: $grey-img-background
+  }
+
   @include tablet {
     @include center;
     padding-left: 120px;
@@ -20,6 +24,7 @@
   @include desktop {
     background-color: transparent;
     padding-left: 190px;
+    padding-right: 110px;
     padding-top: 0;
   }
 }

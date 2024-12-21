@@ -1,20 +1,6 @@
 .page {
   font-family: $font-primary;
   min-width: 300px;
-
-  @include tablet {
-    padding-top: 30px;
-  }
-
-  @include desktop {
-    padding-top: 55px;
-    background-image: linear-gradient(to right, $white 50%, rgba(104, 184, 56, 0.85) 50%), url("../../images/index-background-desktop@2x.png"), linear-gradient(to bottom, $grey-img-background 1000px, $white 1000px);
-    background-position-x: right;
-    background-position-y: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-  }
 }
 
 .page__body {
