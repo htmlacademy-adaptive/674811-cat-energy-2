@@ -3,6 +3,16 @@
   min-width: 300px;
 }
 
+.page__header {
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
+}
+
 .page__body {
   margin: 0;
 }

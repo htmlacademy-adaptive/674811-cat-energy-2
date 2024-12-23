@@ -6,8 +6,9 @@
   line-height: 20px;
   background-color: $white;
 
-  @include mobile-only {
-    &--close {
+
+  &--close {
+    @include mobile-only {
       .navigation__categories-list {
         display: none;
       }
@@ -18,6 +19,33 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;
+  }
+}
+
+.navigation--close .navigation__button-close::before {
+  transform: rotate(0deg);
+  top: 0;
+}
+
+.navigation--close .navigation__button-close::after {
+  transform: rotate(0deg);
+  top: auto;
+  bottom: 0;
+}
+
+.navigation--close .navigation__button-close-strip {
+  transform: rotate(0deg);
+  top: auto;
+  bottom: calc(50% - 1px);
+}
+
+.navigation--open .navigation__categories-list {
+  @include mobile-only {
+    position: absolute;
+    z-index: 10;
+    background-color: $white;
+    width: 100%;
+    top: 67px;
   }
 }
 
@@ -125,7 +153,7 @@
   cursor: pointer;
   position: absolute;
   top: 23px;
-  right: 20px;
+  right: 23px;
   padding: 0;
 
   @include tablet {
@@ -136,11 +164,12 @@
 .navigation__button-close-strip {
   display: block;
   position: absolute;
-  top: 0;
+  top: 7px;
   left: 0;
   width: 100%;
   height: 2px;
   background-color: $black-full;
+  transform: rotate(-45deg);
 }
 
 .navigation__button-close::before,
@@ -155,12 +184,15 @@
 }
 
 .navigation__button-close::before {
-  top: calc(50% - 1px);
+  top: 7px;
+  transform: rotate(45deg);
 }
 
 .navigation__button-close::after {
-  bottom: 0;
+  top: 7px;
+  transform: rotate(-45deg);
 }
+
 
 /* Для JS
 .navigation__button-close:active::before {

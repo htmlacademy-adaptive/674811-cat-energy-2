@@ -9,33 +9,39 @@
   margin-bottom: 20px;
 
   @include mobile-only {
-    background-color: $grey-img-background
+    background-color: $grey-img-background;
   }
 
   @include tablet {
     @include center;
+    padding-top: 0;
     padding-left: 120px;
     padding-right: 30px;
     background-image: none;
     background-color: $white;
-    min-height: 835px;
+    min-height: 805px;
   }
 
   @include desktop {
     background-color: transparent;
     padding-left: 190px;
     padding-right: 110px;
-    padding-top: 0;
+    min-height: auto;
+    padding-bottom: 44px;
   }
 }
 
 .programs-advertisement__wrapper {
   display: block;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @include tablet {
     padding: 0;
+  }
+
+  @include desktop {
+    position: relative;
+    padding-top: 110px;
+    min-height: 500px;
   }
 }
 
@@ -47,6 +53,10 @@
     margin-bottom: 40px;
     max-width: 577px;
   }
+
+  @include desktop {
+    max-width: 475px;
+  }
 }
 
 .programs-advertisement__slogan {
@@ -57,6 +67,10 @@
   @include tablet {
     text-align: left;
     margin-bottom: 50px;
+  }
+
+  @include desktop {
+    max-width: 475px;
   }
 }
 
@@ -77,8 +91,7 @@
   @include desktop {
     width: 552px;
     height: 499px;
-    bottom: auto;
-    top: -100px;
-    left: calc(50% - 160px);
+    bottom: 0;
+    left: calc(50% - 200px);
   }
 }

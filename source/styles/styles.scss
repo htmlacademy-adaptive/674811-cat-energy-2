@@ -6,6 +6,7 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/container.scss";
 @import "./blocks/page.scss";
 @import "./blocks/header.scss";
 @import "./blocks/text.scss";
@@ -24,4 +25,3 @@
 @import "./blocks/promotions.scss";
 @import "./blocks/programs.scss";
 @import "./blocks/programs-choose.scss";
-@import "./blocks/container.scss";
