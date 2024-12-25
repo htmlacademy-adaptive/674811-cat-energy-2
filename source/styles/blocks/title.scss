@@ -18,6 +18,11 @@
     line-height: 37px;
     text-transform: uppercase;
     color: $black-full;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &--main-index {

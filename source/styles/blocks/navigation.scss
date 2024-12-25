@@ -15,6 +15,19 @@
     }
   }
 
+  &--close .navigation__button-close {
+    @include mobile-only {
+      display: block;
+    }
+
+  }
+
+  &--open .navigation__button-close {
+    @include mobile-only {
+      display: block;
+    }
+  }
+
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
@@ -145,7 +158,7 @@
 
 
 .navigation__button-close {
-  display: block;
+  display: none;
   width: 18px;
   height: 18px;
   background-color: $white;

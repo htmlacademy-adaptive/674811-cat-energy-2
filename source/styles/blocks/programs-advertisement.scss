@@ -13,13 +13,13 @@
   }
 
   @include tablet {
-    @include center;
     padding-top: 0;
     padding-left: 120px;
     padding-right: 30px;
     background-image: none;
     background-color: $white;
     min-height: 805px;
+    margin-bottom: 0;
   }
 
   @include desktop {
@@ -28,6 +28,7 @@
     padding-right: 110px;
     min-height: auto;
     padding-bottom: 44px;
+    margin-bottom: 82px;
   }
 }
 

@@ -1,5 +1,15 @@
 .modes {
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 45px;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 71px;
+  }
 }
 
 .modes__wrapper {
@@ -7,6 +17,18 @@
   background-color: $grey-basic;
   margin-bottom: 20px;
   position: relative;
+
+  @include tablet {
+    padding: 77px 63px 53px 52px;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    min-width: 570px;
+    padding-right: 61px;
+    padding-bottom: 55px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -22,18 +44,74 @@
     top: 24px;
     left: 21px;
     border-radius: 50%;
+
+    @include tablet {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      right: 63px;
+      left: auto;
+    }
+
+    @include desktop {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+      right: auto;
+    }
   }
 
   &::after {
-    content: "";
+    @include pseudo;
     background-image: url("../../icons/stack.svg#programs-mobile-cat-slim");
     display: block;
-    width: 50px;
+    width: 36px;
     height: 50px;
-    position: absolute;
-    top: 24px;
-    left: 21px;
-    border-radius: 50%;
+    top: 21px;
+    left: 27px;
+
+    @include tablet {
+      width: 140px;
+      height: 194px;
+      top: 81px;
+      right: 93px;
+      left: auto;
+    }
+
+    @include desktop {
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
+  }
+}
+
+.modes__wrapper--mass {
+  &::after {
+    @include pseudo;
+    display: block;
+    background-image: url("../../icons/stack.svg#programs-mobile-cat-strong");
+    width: 67px;
+    height: 28px;
+    top: 35px;
+    left: 12px;
+
+    @include tablet {
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      right: 29px;
+      left: auto;
+    }
+
+    @include desktop {
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
+    }
   }
 }
 
@@ -42,10 +120,46 @@
   margin-bottom: 29px;
   margin-left: 71px;
   text-align: left;
+
+  @include tablet {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    margin-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .modes__text {
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 15px;
   padding-bottom: 23px;
   border-bottom: 1px solid $grey-light-border;
+
+  @include tablet {
+    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 47px;
+    max-width: 340px;
+  }
+
+  @include desktop {
+    max-width: 457px;
+  }
+}
+
+.modes__link {
+  position: relative;
+}
+
+.modes__link::after {
+  @include pseudo;
+  background-image: url("../../icons/stack.svg#programs-arrow");
+  width: 24px;
+  height: 12px;
+  display: block;
+  top: calc(50% - 6px);
+  left: calc(100% + 15px);
 }

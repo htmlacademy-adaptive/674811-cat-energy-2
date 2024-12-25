@@ -1,3 +1,177 @@
 .product-information {
+  position: relative;
+  margin-bottom: 49px;
+  background-color: $white;
 
+  @include tablet {
+    margin-bottom: 47px;
+  }
+}
+
+.product-information__title {
+  margin: 0 auto 40px 0;
+  text-align: left;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+}
+
+.product-information__list {
+  @include list;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 37px;
+    justify-content: space-between;
+    counter-reset: list 0;
+    padding-right: 79px;
+  }
+
+  @include desktop {
+    padding-right: 0;
+  }
+}
+
+.product-information__list-item {
+  padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &::after {
+    @include pseudo;
+    display: block;
+    z-index: 10;
+  }
+
+  &::before {
+    @include pseudo;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $green-basic;
+    top: 0;
+    left: 0;
+
+    @include tablet {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+    }
+  }
+
+  @include tablet {
+    max-width: 250px;
+
+    &:first-child {
+      max-width: 227px;
+    }
+
+    padding-top: 151px;
+    padding-bottom: 57px;
+    padding-left: 0;
+  }
+}
+
+.product-information__list-item--health {
+  &::after {
+    background-image: url("../../icons/stack.svg#about-leaf");
+    width: 25px;
+    height: 28px;
+    top: 16px;
+    left: 18px;
+
+    @include tablet {
+      top: 67px;
+      left: 27px;
+    }
+  }
+}
+
+.product-information__list-item--powder {
+  &::after {
+    @include pseudo;
+    display: block;
+    background-image: url("../../icons/stack.svg#about-powder");
+    z-index: 10;
+    width: 26px;
+    height: 29px;
+    top: 16px;
+    left: 18px;
+
+    @include tablet {
+      left: 27px;
+      top: 66px;
+    }
+  }
+}
+
+.product-information__list-item--food {
+  &::after {
+    @include pseudo;
+    display: block;
+    background-image: url("../../icons/stack.svg#about-knife-spoon");
+    z-index: 10;
+    width: 25px;
+    height: 30px;
+    top: 15px;
+    left: 18px;
+
+    @include tablet {
+      top: 65px;
+      left: 28px;
+    }
+  }
+}
+
+.product-information__list-item--time {
+  &::after {
+    @include pseudo;
+    display: block;
+    background-image: url("../../icons/stack.svg#about-watches");
+    z-index: 10;
+    width: 26px;
+    height: 31px;
+    top: 15px;
+    left: 18px;
+
+    @include tablet {
+      top: 64px;
+      left: 27px;
+    }
+  }
+}
+
+.product-information__list-text {
+  margin: 0;
+
+  @include tablet {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.product-information__list-text::before {
+  @include tablet {
+    counter-increment: list;
+    content: counter(list);
+    font-family: $font-primary;
+    font-size: 280px;
+    line-height: 280px;
+    color: $grey-basic;
+    position: absolute;
+    top: -150px;
+    right: 0;
+    z-index: -1;
+  }
 }
