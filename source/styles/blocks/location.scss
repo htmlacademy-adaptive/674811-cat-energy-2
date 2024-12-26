@@ -1,3 +1,19 @@
 .location {
+  padding-top: 26px;
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.location__text-wrapper {
+  padding: 0 20px;
+  display: flex;
+}
+
+.location__text {
+  margin: 0;
+
+  &--invite {
+    text-transform: uppercase;
+    min-width: 140px;
+  }
 }

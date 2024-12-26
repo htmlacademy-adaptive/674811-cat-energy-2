@@ -6,6 +6,10 @@
   @include tablet {
     margin-bottom: 47px;
   }
+
+  @include desktop {
+    margin-bottom: 69px;
+  }
 }
 
 .product-information__title {
