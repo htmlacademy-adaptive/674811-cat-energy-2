@@ -27,7 +27,7 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 37px;
+    gap: 37px 20px;
     justify-content: space-between;
     counter-reset: list 0;
     padding-right: 79px;

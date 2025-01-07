@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="container header page__header">
+  <header class="container header header--index page__header">
     <h1 class="visually-hidden">Магазин питания для кошек Cat energy</h1>
     <nav class="navigation navigation--open header__site-navigation">
       <a class="navigation__menu-link navigation__menu-link--logo" href="#">
@@ -21,7 +21,7 @@
         </picture>
         <img class="navigation__logo-img-words" src="./images/header-logo-mobile-words.svg" width="101" height="18" alt="Название магазина">
       </a>
-      <ul class="navigation__categories-list">
+      <ul class="navigation__categories-list navigation__categories-list--index">
         <li class="navigation__categories-item navigation__categories-item--active">
           <a class="navigation__menu-link" href="#">
             Главная
@@ -86,53 +86,55 @@
         </li>
       </ul>
     </section>
-    <section class="living-example container">
-      <div class="living-example__wrapper">
-        <h2 class="title title--section living-example__title">Живой пример</h2>
-        <p class="text text--small living-example__story">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="living-example__information">
-          <dl class="living-example__information-list">
-            <div class="living-example__information-wrapper">
-              <dt class="text text--livig-example-meaning living-example__information-meaning">
-                5 КГ
-              </dt>
-              <dd class="text text--very-small living-example__information-description">
-                Снижение веса
-              </dd>
-            </div>
-            <div class="living-example__information-wrapper">
-              <dt class="text text--livig-example-meaning living-example__information-meaning">
-                60 ДНЕЙ
-              </dt>
-              <dd class="text text--very-small living-example__information-description living-example__information-description--time">
-                Затрачено времени
-              </dd>
-            </div>
-          </dl>
-          <p class="living-example__final-price text text--middle">Затраты на питание: <span class="living-example__final-price-meaning">15 000 РУБ.</span></p>
+    <section class="living-example">
+      <div class="living-example__section-wrapper container">
+        <div class="living-example__wrapper">
+          <h2 class="title title--section living-example__title">Живой пример</h2>
+          <p class="text text--small living-example__story">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="living-example__information">
+            <dl class="living-example__information-list">
+              <div class="living-example__information-wrapper">
+                <dt class="text text--livig-example-meaning living-example__information-meaning">
+                  5 КГ
+                </dt>
+                <dd class="text text--very-small living-example__information-description">
+                  Снижение веса
+                </dd>
+              </div>
+              <div class="living-example__information-wrapper">
+                <dt class="text text--livig-example-meaning living-example__information-meaning">
+                  60 ДНЕЙ
+                </dt>
+                <dd class="text text--very-small living-example__information-description living-example__information-description--time">
+                  Затрачено времени
+                </dd>
+              </div>
+            </dl>
+            <p class="living-example__final-price text text--middle">Затраты на питание: <span class="living-example__final-price-meaning">15 000 РУБ.</span></p>
+          </div>
         </div>
-      </div>
-      <div class="living-example__slider-wrapper">
-        <div class="living-example__slider-img-wrapper living-example__slider-img-wrapper--fat">
-          <picture>
-            <source type="image/jpeg" media="(min-width: 768px)" srcset="./images/living-example-tablet-before@1x.png 1x, ./images/living-example-tablet-before@2x.png 2x" width="560" height="512">
-            <img class="living-example__slider-img" src="./images/living-example-mobile-before@1x.png" srcset="./images/living-example-mobile-before@2x.png 2x" width="280" height="256" alt="Толстый кот">
-          </picture>
+        <div class="living-example__slider-wrapper">
+          <div class="living-example__slider-img-wrapper living-example__slider-img-wrapper--fat">
+            <picture>
+              <source type="image/jpeg" media="(min-width: 768px)" srcset="./images/living-example-tablet-before@1x.png 1x, ./images/living-example-tablet-before@2x.png 2x" width="560" height="512">
+              <img class="living-example__slider-img" src="./images/living-example-mobile-before@1x.png" srcset="./images/living-example-mobile-before@2x.png 2x" width="280" height="256" alt="Толстый кот">
+            </picture>
+          </div>
+          <div class="living-example__slider-img-wrapper">
+            <picture>
+              <source type="image/jpeg" media="(min-width: 768px)" srcset="./images/living-example-tablet-after@1x.png 1x, ./images/living-example-tablet-after@2x.png 2x" width="560" height="512">
+              <img class="living-example__slider-img" src="./images/living-example-mobile-after@1x.png" srcset="./images/living-example-mobile-after@2x.png 2x" width="280" height="256" alt="Худой кот">
+            </picture>
+          </div>
+          <button class="living-example__slider-button" type="button" aria-label="Кнопка слайдера"></button>
         </div>
-        <div class="living-example__slider-img-wrapper">
-          <picture>
-            <source type="image/jpeg" media="(min-width: 768px)" srcset="./images/living-example-tablet-after@1x.png 1x, ./images/living-example-tablet-after@2x.png 2x" width="560" height="512">
-            <img class="living-example__slider-img" src="./images/living-example-mobile-after@1x.png" srcset="./images/living-example-mobile-after@2x.png 2x" width="280" height="256" alt="Худой кот">
-          </picture>
-        </div>
-        <button class="living-example__slider-button" type="button" aria-label="Кнопка слайдера"></button>
       </div>
     </section>
   </main>
   <footer class="page__footer footer">
-    <section class="location container">
+    <section class="location">
       <h2 class="visually-hidden">Наше местонахождение</h2>
-      <div class="location__text-wrapper">
+      <div class="location__text-wrapper container">
         <p class="text text--middle-bigger location__text location__text--invite">Приглашаем к сотрудничеству дилеров!</p>
         <p class="text text--small location__text location__text--adress">ул. Большая
           Конюшенная, д. 19/8
@@ -144,27 +146,29 @@
         <img class="location__map" src="./images/location-mobile-map@1x.png" srcset="./images/location-mobile-map@2x.png 2x" width="320" height="362" alt="Cat energy с курицей">
       </picture>
     </section>
-    <div class="footer__wrapper">
-      <a class="footer__logo-link" href="#" aria-label="Название магазина">
-        <svg width="128" height="24" viewBox="0 0 128 24" role="img">
-          <use href="./icons/stack.svg#footer-logo-words"></use>
-        </svg>
-      </a>
-      <ul class="footer__socials-list socials">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="#"></a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--youtube" href="#"></a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--tg" href="#"></a>
-        </li>
-      </ul>
-      <a class="footer__wrapper-link" href="#">
-        <span class="footer__link-academy-name">HTML Academy</span>
-        <img class="footer__link-academy-logo" src="./images/foote-academy-logo.svg" width="27" height="34" alt="Логотип Академии">
-      </a>
+    <div class="footer__wrapper-background">
+      <div class="footer__wrapper container">
+        <a class="footer__logo-link" href="#" aria-label="Название магазина">
+          <svg width="128" height="24" viewBox="0 0 128 24" role="img">
+            <use href="./icons/stack.svg#footer-logo-words"></use>
+          </svg>
+        </a>
+        <ul class="footer__socials-list socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="#" aria-label="Мы ВКонтакте"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="#" aria-label="Мы ВКонтакте"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--tg" href="#" aria-label="Мы ВКонтакте"></a>
+          </li>
+        </ul>
+        <a class="footer__wrapper-link" href="#">
+          <span class="footer__link-academy-name">HTML Academy</span>
+          <img class="footer__link-academy-logo" src="./images/foote-academy-logo.svg" width="27" height="34" alt="Логотип Академии">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

@@ -1,12 +1,14 @@
 .location {
-  padding-top: 26px;
   padding-left: 0;
   padding-right: 0;
 }
 
 .location__text-wrapper {
-  padding: 0 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
+  justify-content: space-between;
+  column-gap: 14px;
 }
 
 .location__text {
@@ -14,6 +16,12 @@
 
   &--invite {
     text-transform: uppercase;
-    min-width: 140px;
+    min-width: 128px;
+    max-width: 180px;
+  }
+
+  &--adress {
+    line-height: 20px;
+    max-width: 210px;
   }
 }

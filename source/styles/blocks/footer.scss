@@ -1,3 +1,67 @@
 .footer {
+  position: relative;
+}
 
+.footer__wrapper-background {
+  background-color: $grey-basic;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @include desktop {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+.footer__logo-link {
+  height: 24px;
+  display: block;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.footer__link-academy-logo {
+  @include tablet {
+    height: 37px;
+  }
+}
+
+.footer__socials-list {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.footer__wrapper-link {
+  @include link;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-secondary;
+  color: $grey-dark-light;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  @include tablet {
+    max-width: 168px;
+  }
 }

@@ -20,3 +20,20 @@
 .page__main {
   position: relative;
 }
+
+.page__main-title {
+  &--catalog {
+    border-top: 1px solid $grey-light-border;
+    margin: 0;
+
+    @include tablet {
+      border: 0;
+      text-align: left;
+      margin-bottom: 84px;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 165px;
+  }
+}

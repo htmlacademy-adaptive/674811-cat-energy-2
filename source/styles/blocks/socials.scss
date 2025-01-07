@@ -1,5 +1,19 @@
 .socials {
+  @include list;
+  @include grey-border;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+  padding: 20px 0;
 
+  @include tablet {
+    border: 0;
+    max-width: 132px;
+    padding: 0;
+  }
 }
 
 .socials__link {
@@ -23,6 +37,18 @@
   &--vk {
     &::after {
       mask-image: url("../../icons/stack.svg#footer-icon-vk");
+    }
+  }
+
+  &--youtube {
+    &::after {
+      mask-image: url("../../icons/stack.svg#footer-icon-youtube");
+    }
+  }
+
+  &--tg {
+    &::after {
+      mask-image: url("../../icons/stack.svg#footer-icon-tg");
     }
   }
 

@@ -27,6 +27,12 @@
     }
   }
 
+  &--small-additional-goods {
+    @include tablet {
+      line-height: 20px;
+    }
+  }
+
   &--middle-link {
     color: $black-full;
     text-transform: uppercase;
@@ -58,6 +64,20 @@
     color: $black-lighter;
   }
 
+  &--middle-bigger-catalog {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black-lighter-catalog;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
   &--livig-example-meaning {
     font-size: 24px;
     line-height: 24px;
@@ -70,6 +90,18 @@
     }
   }
 
+  &--very-small-catalog {
+    font-family: $font-secondary;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey-dark-light;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
   &--very-small {
     font-family: $font-secondary;
     font-size: 12px;
@@ -79,5 +111,25 @@
       font-size: 14px;
       line-height: 14px;
     }
+  }
+
+  &--additional-goods-item-title {
+    font-size: 16px;
+    line-height: 16px;
+    color: $black-lighter-catalog;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &--middle-catalog-white {
+    font-family: $font-secondary;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    font-weight: 400;
   }
 }

@@ -4,8 +4,9 @@
   @include mobile-only {
     padding: 0;
   }
+}
 
-
+.header--index {
   &::after {
     @include pseudo;
     position: absolute;
