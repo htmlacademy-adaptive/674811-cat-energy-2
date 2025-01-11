@@ -1,3 +1,288 @@
 .programs-choose {
+  position: relative;
+}
 
+.programs-choose__user {
+  margin-bottom: 26px;
+
+  @include tablet {
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    display: flex;
+    column-gap: 80px;
+    flex-shrink: 1;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin-bottom: 70;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $desktop-width;
+  }
+}
+
+.programs-choose__wrapper-id {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 72px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include desktop {
+    flex: auto;
+    margin-bottom: 0;
+  }
+}
+
+.programs-choose__label {
+  display: flex;
+  margin-bottom: 14px;
+  column-gap: 13px;
+  max-width: 100%;
+  align-items: center;
+
+  @include tablet {
+    margin-bottom: 19px;
+  }
+
+  @include desktop {
+    flex-grow: 1;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--contacts {
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.programs-choose__input {
+  flex-grow: 1;
+}
+
+.programs-choose__fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  &--radio {
+    border-top: 1px solid $grey-light-border;
+    border-bottom: 1px solid $grey-light-border;
+    padding: 22px 20px 19px;
+
+    @include tablet {
+      border: 1px solid $grey-light-border;
+      padding: 23px 27px 27px;
+    }
+
+    @include desktop {
+      flex: auto;
+    }
+  }
+}
+
+.programs-choose__title {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+
+  &--contacts {
+    margin-bottom: 35px;
+
+    @include tablet {
+      margin-bottom: 76px;
+    }
+  }
+
+  @include tablet {
+    padding-left: 30px;
+  }
+
+  @include desktop {
+    padding-left: 70px;
+  }
+}
+
+.programs-choose__list {
+  @include list;
+
+  &--check {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 32px;
+    }
+
+    & .programs-choose__item {
+      @include tablet {
+        margin-bottom: 0;
+        padding-right: 30px;
+        min-width: 286px;
+      }
+    }
+  }
+}
+
+.programs-choose__item {
+  position: relative;
+  padding: 6px 10px 6px 45px;
+  margin-bottom: 13px;
+
+  @include tablet {
+    padding: 5px 10px 5px 60px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.programs-choose__radio-mark::before {
+  @include pseudo;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $grey-light-2;
+  border-radius: 50%;
+  background-color: transparent;
+
+  @include tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.programs-choose__radio-input[type="radio"]:checked + .programs-choose__radio-mark::after {
+  @include pseudo;
+  display: block;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: $green-basic;
+
+  @include tablet {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.programs-choose__textarea-wrapper {
+  margin-bottom: 23px;
+
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    margin-bottom: 70px;
+  }
+}
+
+.programs-choose__textarea {
+  width: 100%;
+  min-height: 175px;
+  margin: 0 auto;
+  border: 1px solid $grey-light-3;
+  padding: 14px;
+}
+
+.programs-choose__checkbox-mark {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $grey-light-2;
+  background-color: transparent;
+  z-index: 0;
+
+  @include tablet {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.programs-choose__checkbox-wrapper {
+  margin-bottom: 34px;
+
+  @include tablet {
+    margin-bottom: 52px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+}
+
+.programs-choose__checkbox-input[type="checkbox"]:checked + .programs-choose__checkbox-mark::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 18px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  mask-image: url("../../icons/stack.svg#checked-icon");
+  background-color: $green-basic;
+  z-index: 1;
+
+  @include tablet {
+    width: 24px;
+    height: 19px;
+    top: 11px;
+    left: 8px;
+  }
+}
+
+.programs-choose__submit-wrapper {
+  position: relative;
+  text-align: center;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 284px 1fr;
+    column-gap: 60px;
+    text-align: left;
+    align-items: center;
+  }
+
+  @include desktop {
+    grid-template-columns: 570px 1fr;
+  }
+}
+
+.programs-choose__submit {
+  width: 100%;
+  margin-bottom: 21px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.programs-choose__about-button {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black-full;
 }

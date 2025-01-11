@@ -13,8 +13,6 @@
   }
 
   &--section-green-stripe {
-    display: inline-block;
-    justify-content: flex-start;
     font-size: 24px;
     line-height: 24px;
 
@@ -22,11 +20,15 @@
       font-size: 32px;
       line-height: 32px;
     }
+
+    @include desktop {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   &--page-main {
     padding-top: 27px;
-    padding-bottom: 41px;
     line-height: 36px;
     font-size: 36px;
 

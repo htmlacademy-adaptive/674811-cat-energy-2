@@ -132,4 +132,39 @@
     color: $white;
     font-weight: 400;
   }
+
+  &--middle-catalog-promotions {
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-full;
+
+    @include tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &--middle-programs-subtitle {
+    font-size: 14px;
+    line-height: 18px;
+    color: $black-full;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &--middle-programs-label {
+    font-size: 16px;
+    line-height: 18px;
+    color: $grey-dark-light;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 29px;
+    }
+  }
 }

@@ -14,4 +14,15 @@
     max-width: $desktop-width;
     padding: 0 110px;
   }
+
+  &--programs {
+    @include tablet {
+      max-width: $tablet-only-width;
+      padding: 0 70px;
+    }
+
+    @include desktop {
+      padding: 0 110px;
+    }
+  }
 }

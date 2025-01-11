@@ -1,3 +1,62 @@
 .promotions {
+  position: relative;
+  margin-bottom: 40px;
 
+  @include tablet {
+    margin-bottom: 104px;
+  }
+}
+
+.promotions__title {
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 66px;
+  }
+
+  @include desktop {
+    margin-bottom: 72px;
+  }
+}
+
+.promotions__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    padding: 0 68px;
+  }
+}
+
+.promotions__subtitle {
+  margin: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.promotions__subscribe-form {
+  width: 100%;
+
+  @include tablet {
+    display: flex;
+    max-width: 752px;
+  }
+}
+
+.promotions__subscribe-input {
+  margin-bottom: 16px;
+
+  @include tablet {
+    min-width: 376px;
+    margin-bottom: 0;
+  }
+}
+
+.promotions__button {
+  width: 100%;
+
+  @include tablet {
+    max-width: 256px;
+  }
 }

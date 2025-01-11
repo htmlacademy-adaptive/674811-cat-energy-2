@@ -22,18 +22,29 @@
 }
 
 .page__main-title {
+  position: relative;
+
   &--catalog {
     border-top: 1px solid $grey-light-border;
     margin: 0;
+    margin-bottom: 41px;
 
     @include tablet {
       border: 0;
       text-align: left;
       margin-bottom: 84px;
     }
+
+    @include desktop {
+      margin-bottom: 165px;
+    }
   }
 
-  @include desktop {
-    margin-bottom: 165px;
+  &--programs {
+    margin-bottom: 37px;
+
+    @include desktop {
+      padding-left: 110px;
+    }
   }
 }
