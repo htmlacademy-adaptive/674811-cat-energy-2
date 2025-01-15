@@ -132,19 +132,23 @@
     </section>
   </main>
   <footer class="page__footer footer">
-    <section class="location">
+    <section class="location location--index">
       <h2 class="visually-hidden">Наше местонахождение</h2>
-      <div class="location__text-wrapper location__text-wrapper--index container">
-        <p class="text text--middle-bigger location__text location__text--invite">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="text text--small location__text location__text--adress">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
+      <div class="location__wrapper location__wrapper--index">
+        <div class="location__text-wrapper container">
+          <p class="text text--middle-bigger location__text location__text--invite">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="text text--small location__text location__text--adress">ул. Большая
+            Конюшенная, д. 19/8
+            <span class="location__text-city">Санкт-Петербург</span>
+          </p>
+        </div>
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" srcset="./images/location-desktop-map@1x.png 1x, ./images/location-desktop-map@2x.png 2x" width="1440" height="400">
+          <source type="image/png" media="(min-width: 768px)" srcset="./images/location-tablet-map@1x.png, ./images/location-tablet-map@2x.png 2x" width="768" height="400">
+          <img class="location__map-img" src="./images/location-mobile-map@1x.png" srcset="./images/location-mobile-map@2x.png 2x" width="320" height="362" alt="Наше местонахождение">
+        </picture>
       </div>
-      <picture>
-        <source type="image/png" media="(min-width: 1440px)" srcset="./images/location-desktop-map@1x.png 1x, ./images/location-desktop-map@2x.png 2x" width="1440" height="400">
-        <source type="image/png" media="(min-width: 768px)" srcset="./images/location-tablet-map@1x.png, ./images/location-tablet-map@2x.png 2x" width="768" height="400">
-        <img class="location__map" src="./images/location-mobile-map@1x.png" srcset="./images/location-mobile-map@2x.png 2x" width="320" height="362" alt="Cat energy с курицей">
-      </picture>
+      <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1736928696914!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
     </section>
     <div class="footer__wrapper-background">
       <div class="footer__wrapper container">
@@ -166,7 +170,6 @@
         </ul>
         <a class="footer__wrapper-link" href="#">
           <span class="footer__link-academy-name">HTML Academy</span>
-          <img class="footer__link-academy-logo" src="./images/foote-academy-logo.svg" width="27" height="34" alt="Логотип Академии">
         </a>
       </div>
     </div>

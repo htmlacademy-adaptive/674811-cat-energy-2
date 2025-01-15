@@ -18,6 +18,14 @@
 
   &--green {
     background-color: $green-basic;
+
+    &:hover {
+      background-color: $green-link-hover;
+    }
+
+    &:active {
+      color: $white-link-active;
+    }
   }
 
   &--green-promotions {
@@ -32,6 +40,14 @@
     background-color: $grey-basic;
     color: $grey-dark-light;
     width: 100%;
+
+    &:hover {
+      background-color: $grey-light-border-2;
+    }
+
+    &:active {
+      color: rgba($color: #444444, $alpha: 0.3);
+    }
   }
 
   &--main-index {

@@ -19,14 +19,6 @@
       top: 20px;
     }
   }
-
-  @include tablet {
-    padding-left: 30px;
-  }
-
-  @include desktop {
-    padding-left: 70px;
-  }
 }
 
 .stripe-wrapper__title {

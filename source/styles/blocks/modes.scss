@@ -152,14 +152,28 @@
 
 .modes__link {
   position: relative;
+
+  &.modes__link:hover {
+    &.modes__link::after {
+      background-image: url("../../icons/stack.svg#programs-arrow-long");
+      width: 32px;
+      height: 10px;
+      transition: 0.2s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .modes__link::after {
   @include pseudo;
   background-image: url("../../icons/stack.svg#programs-arrow");
   width: 24px;
-  height: 12px;
+  height: 10px;
   display: block;
   top: calc(50% - 6px);
   left: calc(100% + 15px);
+  transition: 0.4s;
 }

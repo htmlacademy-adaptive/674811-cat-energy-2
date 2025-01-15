@@ -12,11 +12,15 @@
 }
 
 .additional-goods__title {
-  margin: 0;
   margin-bottom: 36px;
 
   @include tablet {
     margin-bottom: 80px;
+    padding-left: 30px;
+  }
+
+  @include desktop {
+    padding-left: 70px;
   }
 }
 

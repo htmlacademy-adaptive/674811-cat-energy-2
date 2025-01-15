@@ -9,13 +9,16 @@
 
 .promotions__title {
   margin-bottom: 32px;
+  padding-left: 0;
 
   @include tablet {
+    padding-left: 30px;
     margin-bottom: 66px;
   }
 
   @include desktop {
     margin-bottom: 72px;
+    padding-left: 70px;
   }
 }
 

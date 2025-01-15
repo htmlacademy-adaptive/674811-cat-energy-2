@@ -5,6 +5,21 @@
 .programs-choose__user {
   margin-bottom: 26px;
 
+  &--contacts {
+    & .programs-choose__label {
+      &::before {
+        @include pseudo;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 14px;
+        background-color: $black-full;
+        z-index: 10;
+      }
+    }
+  }
+
+
   @include tablet {
     padding-left: 70px;
     padding-right: 70px;
@@ -47,6 +62,7 @@
   column-gap: 13px;
   max-width: 100%;
   align-items: center;
+  position: relative;
 
   @include tablet {
     margin-bottom: 19px;
@@ -60,21 +76,35 @@
     margin-bottom: 0;
   }
 
-  &--contacts {
-    @include desktop {
-      margin-bottom: 0;
+  &--phone {
+    &::before {
+      @include pseudo;
+      width: 15px;
+      height: 15px;
+      mask-image: url("../../icons/stack.svg#programs-choose-phone");
+    }
+  }
+
+  &--mail {
+    &::before {
+      @include pseudo;
+      width: 17px;
+      height: 13px;
+      mask-image: url("../../icons/stack.svg#programs-choose-mail");
     }
   }
 }
 
 .programs-choose__input {
   flex-grow: 1;
+  position: relative;
 }
 
 .programs-choose__fieldset {
   border: 0;
   margin: 0;
   padding: 0;
+  position: relative;
 
   &--radio {
     border-top: 1px solid $grey-light-border;
@@ -150,11 +180,15 @@
   }
 }
 
+.programs-choose__radio-mark {
+  position: relative;
+}
+
 .programs-choose__radio-mark::before {
   @include pseudo;
   display: block;
-  top: 0;
-  left: 0;
+  top: -4px;
+  left: -45px;
   width: 30px;
   height: 30px;
   border: 1px solid $grey-light-2;
@@ -162,6 +196,7 @@
   background-color: transparent;
 
   @include tablet {
+    left: -60px;
     width: 40px;
     height: 40px;
   }
@@ -170,15 +205,16 @@
 .programs-choose__radio-input[type="radio"]:checked + .programs-choose__radio-mark::after {
   @include pseudo;
   display: block;
-  top: 50%;
-  left: 9px;
-  transform: translateY(-50%);
+  top: 4px;
+  left: -36px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
   background-color: $green-basic;
 
   @include tablet {
+    left: -49px;
+    top: 7px;
     width: 18px;
     height: 18px;
   }
@@ -207,8 +243,8 @@
 .programs-choose__checkbox-mark {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -6px;
+  left: -45px;
   width: 30px;
   height: 30px;
   border: 1px solid $grey-light-2;
@@ -216,6 +252,8 @@
   z-index: 0;
 
   @include tablet {
+    left: -60px;
+    top: -3px;
     width: 40px;
     height: 40px;
   }
@@ -234,8 +272,7 @@
 }
 
 .programs-choose__checkbox-input[type="checkbox"]:checked + .programs-choose__checkbox-mark::after {
-  content: "";
-  position: absolute;
+  @include pseudo;
   top: 6px;
   left: 5px;
   width: 18px;

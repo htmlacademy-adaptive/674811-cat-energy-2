@@ -57,4 +57,10 @@
       background-color: $green-basic;
     }
   }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }

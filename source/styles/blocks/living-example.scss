@@ -245,4 +245,20 @@
     mask-repeat: no-repeat;
     mask-position: center;
   }
+
+  &:hover {
+    border-color: $green-basic;
+
+    &::before {
+      border-color: $green-basic;
+    }
+
+    &::after {
+      background-color: $green-basic;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
