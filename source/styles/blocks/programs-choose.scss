@@ -6,16 +6,18 @@
   margin-bottom: 26px;
 
   &--contacts {
-    & .programs-choose__label {
-      &::before {
-        @include pseudo;
-        display: block;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 14px;
-        background-color: $black-full;
-        z-index: 10;
-      }
+    & .programs-choose__label::after {
+      @include pseudo;
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 14px;
+      background-color: $black-full;
+      z-index: 10;
+    }
+
+    & .programs-choose__label--error.programs-choose__label::after {
+      background-color: $red-error;
     }
   }
 
@@ -76,8 +78,16 @@
     margin-bottom: 0;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus-within::after {
+    background-color: $green-basic;
+  }
+
   &--phone {
-    &::before {
+    &::after {
       @include pseudo;
       width: 15px;
       height: 15px;
@@ -86,11 +96,22 @@
   }
 
   &--mail {
-    &::before {
+    @include desktop {
+      margin-bottom: 0;
+    }
+
+    &::after {
       @include pseudo;
       width: 17px;
       height: 13px;
       mask-image: url("../../icons/stack.svg#programs-choose-mail");
+    }
+  }
+
+  &--error {
+    & .input-text {
+      border-color: $red-error;
+      outline: 1px solid $red-error;
     }
   }
 }
@@ -159,7 +180,6 @@
     & .programs-choose__item {
       @include tablet {
         margin-bottom: 0;
-        padding-right: 30px;
         min-width: 286px;
       }
     }
@@ -168,41 +188,77 @@
 
 .programs-choose__item {
   position: relative;
-  padding: 6px 10px 6px 45px;
+  padding: 6px 10px 6px 0;
   margin-bottom: 13px;
 
   @include tablet {
-    padding: 5px 10px 5px 60px;
+    padding: 5px 10px 5px 0;
   }
 
   &:last-child {
     margin-bottom: 0;
   }
-}
 
-.programs-choose__radio-mark {
-  position: relative;
-}
+  & .programs-choose__label {
+    padding-left: 45px;
 
-.programs-choose__radio-mark::before {
-  @include pseudo;
-  display: block;
-  top: -4px;
-  left: -45px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid $grey-light-2;
-  border-radius: 50%;
-  background-color: transparent;
+    @include tablet {
+      padding-left: 60px;
+    }
 
-  @include tablet {
-    left: -60px;
-    width: 40px;
-    height: 40px;
+    &:hover .programs-choose__mark::before,
+    .programs-choose__mark--checkbox {
+      border-color: $grey-light-4;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
-.programs-choose__radio-input[type="radio"]:checked + .programs-choose__radio-mark::after {
+.programs-choose__mark {
+  position: relative;
+
+  &--radio::before {
+    @include pseudo;
+    display: block;
+    top: -4px;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $grey-light-2;
+    border-radius: 50%;
+    background-color: transparent;
+
+    @include tablet {
+      left: -60px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--checkbox {
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $grey-light-2;
+    background-color: transparent;
+    z-index: 0;
+
+    @include tablet {
+      left: 0;
+      top: -3px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.programs-choose__radio-input[type="radio"]:checked + .programs-choose__mark--radio::after {
   @include pseudo;
   display: block;
   top: 4px;
@@ -240,25 +296,6 @@
   padding: 14px;
 }
 
-.programs-choose__checkbox-mark {
-  display: block;
-  position: absolute;
-  top: -6px;
-  left: -45px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid $grey-light-2;
-  background-color: transparent;
-  z-index: 0;
-
-  @include tablet {
-    left: -60px;
-    top: -3px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
 .programs-choose__checkbox-wrapper {
   margin-bottom: 34px;
 
@@ -271,7 +308,7 @@
   }
 }
 
-.programs-choose__checkbox-input[type="checkbox"]:checked + .programs-choose__checkbox-mark::after {
+.programs-choose__checkbox-input[type="checkbox"]:checked + .programs-choose__mark--checkbox::after {
   @include pseudo;
   top: 6px;
   left: 5px;

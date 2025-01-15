@@ -35,12 +35,13 @@
     margin-bottom: 0;
   }
 
-  &:hover {
-    opacity: 0.8;
+  &:hover,
+  &:focus {
+    fill: $black-hover;
   }
 
   &:active {
-    opacity: 0.6;
+    fill: $black-active;
   }
 }
 
@@ -90,7 +91,8 @@
     mask-image: url("../../icons/stack.svg#html-academy");
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::after {
       background-color: $green-basic;
     }

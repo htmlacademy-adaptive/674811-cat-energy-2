@@ -152,13 +152,14 @@
 
 .modes__link {
   position: relative;
+  padding-right: 57px;
 
   &.modes__link:hover {
     &.modes__link::after {
-      background-image: url("../../icons/stack.svg#programs-arrow-long");
       width: 32px;
       height: 10px;
       transition: 0.2s;
+      background-position-x: -2px;
     }
   }
 
@@ -169,11 +170,13 @@
 
 .modes__link::after {
   @include pseudo;
-  background-image: url("../../icons/stack.svg#programs-arrow");
-  width: 24px;
+  background-image: url("../../icons/stack.svg#programs-arrow-long");
+  background-position-x: -8px;
+  background-repeat: no-repeat;
+  width: 32px;
   height: 10px;
   display: block;
   top: calc(50% - 6px);
-  left: calc(100% + 15px);
+  right: 0;
   transition: 0.4s;
 }

@@ -8,6 +8,16 @@
   border-radius: 0;
   width: inherit;
   text-transform: uppercase;
+  background-color: $white;
+
+  &:hover {
+    border-color: $grey-light-2;
+  }
+
+  &:focus {
+    outline: 1px solid $grey-dark-light;
+    border-color: $grey-dark-light;
+  }
 
   &--programs {
     font-size: 16px;

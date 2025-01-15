@@ -9,6 +9,8 @@
 
   &--close {
     @include mobile-only {
+      border-bottom: 1px solid $grey-light;
+
       .navigation__categories-list {
         display: none;
       }

@@ -54,13 +54,14 @@
         </span>
       </p>
       <form class="programs__form programs-choose" action="#" method="post">
+        <!-- Класс для обозначения ошибочного значения поля "programs-choose__label-error" -->
         <div class="programs-choose__user">
           <div class="programs-choose__wrapper-id container container--programs">
             <label class="text text--middle-programs-label programs-choose__label">Имя:*
-              <input class="input-text input-text--programs programs-choose__input" name="name" type="text">
+              <input class="input-text input-text--programs programs-choose__input" name="name" type="text" required>
             </label>
             <label class="text text--middle-programs-label programs-choose__label">Вес (кг):*
-              <input class="input-text input-text--programs programs-choose__input" name="weight" type="number">
+              <input class="input-text input-text--programs programs-choose__input" name="weight" type="number" required>
             </label>
             <label class="text text--middle-programs-label programs-choose__label">Возраст (лет):
               <input class="input-text input-text--programs programs-choose__input" name="old" type="number">
@@ -72,14 +73,13 @@
               <li class="programs-choose__item">
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--radio">
                   <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight" value="weight loss" checked>
-
-                  <span class="programs-choose__radio-mark">похудение</span>
+                  <span class="programs-choose__mark programs-choose__mark--radio">похудение</span>
                 </label>
               </li>
               <li class="programs-choose__item">
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--radio">
                   <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight" value="weight gain">
-                  <span class="programs-choose__radio-mark">
+                  <span class="programs-choose__mark programs-choose__mark--radio">
                     Набор массы
                   </span>
                 </label>
@@ -87,7 +87,7 @@
               <li class="programs-choose__item">
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--radio">
                   <input class="programs-choose__radio-input visually-hidden" type="radio" name="weight" value="need help">
-                  <span class="programs-choose__radio-mark">
+                  <span class="programs-choose__mark programs-choose__mark--radio">
                     Не знаю (Нужен ваш совет)
                   </span>
                 </label>
@@ -104,11 +104,11 @@
             </h2>
           </div>
           <div class="programs-choose__user programs-choose__user--contacts container">
-            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--mail">E-mail:*
-              <input class="input-text input-text--programs programs-choose__input programs-choose__input--mail" type="email" name="mail" placeholder="kuklachev@gmail.com">
+            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--mail programs-choose__label--error">E-mail:*
+              <input class="input-text input-text--programs programs-choose__input programs-choose__input--mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="text text--middle-programs-label programs-choose__label programs-choose__label--phone">Телефон:*
-              <input class="input-text input-text--programs programs-choose__input programs-choose__input--phone" type="tel" name="phone-number" placeholder="8 (960) 900-60-90">
+              <input class="input-text input-text--programs programs-choose__input programs-choose__input--phone" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
             </label>
           </div>
         </fieldset>
@@ -136,28 +136,28 @@
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--checkbox">
                   <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="no-sugar" checked>
                   сахарозаменитель
-                  <span class="programs-choose__checkbox-mark"></span>
+                  <span class="programs-choose__mark programs-choose__mark--checkbox"></span>
                 </label>
               </li>
               <li class="programs-choose__item">
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--checkbox">
                   <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="water">
                   питьевая вода
-                  <span class="programs-choose__checkbox-mark"></span>
+                  <span class="programs-choose__mark programs-choose__mark--checkbox"></span>
                 </label>
               </li>
               <li class="programs-choose__item">
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--checkbox">
                   <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="milk">
                   молоко
-                  <span class="programs-choose__checkbox-mark"></span>
+                  <span class="programs-choose__mark programs-choose__mark--checkbox"></span>
                 </label>
               </li>
               <li class="programs-choose__item">
                 <label class="text text--middle-programs-label programs-choose__label programs-choose__label--checkbox">
                   <input class="programs-choose__checkbox-input visually-hidden" type="checkbox" name="vitamins">
                   витамины
-                  <span class="programs-choose__checkbox-mark"></span>
+                  <span class="programs-choose__mark programs-choose__mark--checkbox"></span>
                 </label>
               </li>
             </ul>
