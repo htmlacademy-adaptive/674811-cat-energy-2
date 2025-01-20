@@ -1,7 +1,15 @@
 .additional-goods {
   position: relative;
   background-color: $white;
-  margin-bottom: 94px;
+  margin-bottom: 41px;
+
+  @include tablet {
+    margin-bottom: 79px;
+  }
+
+  @include desktop {
+    margin-bottom: 94px;
+  }
 }
 
 .additional-goods__wrapper {
@@ -171,7 +179,7 @@
 
   @include tablet {
     text-align: left;
-    margin-right: 111px;
+    margin-right: 125px;
   }
 
   @include desktop {

@@ -6,17 +6,17 @@
   margin-bottom: 26px;
 
   &--contacts {
-    & .programs-choose__label::after {
+    .programs-choose__label::after {
       @include pseudo;
       display: block;
       top: 50%;
       transform: translateY(-50%);
-      right: 14px;
+      right: 17px;
       background-color: $black-full;
       z-index: 10;
     }
 
-    & .programs-choose__label--error.programs-choose__label::after {
+    .programs-choose__label--error::after {
       background-color: $red-error;
     }
   }
@@ -55,6 +55,7 @@
   @include desktop {
     flex: auto;
     margin-bottom: 0;
+    min-width: 570px;
   }
 }
 
@@ -97,6 +98,7 @@
 
   &--mail {
     @include desktop {
+      min-width: 570px;
       margin-bottom: 0;
     }
 
@@ -114,6 +116,12 @@
       outline: 1px solid $red-error;
     }
   }
+
+  &--checkbox {
+    @include desktop {
+      min-width: 200px;
+    }
+  }
 }
 
 .programs-choose__input {
@@ -127,19 +135,28 @@
   padding: 0;
   position: relative;
 
-  &--radio {
-    border-top: 1px solid $grey-light-border;
-    border-bottom: 1px solid $grey-light-border;
-    padding: 22px 20px 19px;
+  &.stripe-wrapper::before {
+    top: 23px;
+  }
+}
 
-    @include tablet {
-      border: 1px solid $grey-light-border;
-      padding: 23px 27px 27px;
-    }
+.programs-choose__fieldset.programs-choose__fieldset--radio {
+  border-top: 1px solid $grey-light-border;
+  border-bottom: 1px solid $grey-light-border;
+  padding: 19px 20px;
 
-    @include desktop {
-      flex: auto;
-    }
+  @include tablet {
+    border: 1px solid $grey-light-border;
+    padding: 23px 27px 12px;
+    min-height: 196px;
+  }
+
+  @include desktop {
+    flex: auto;
+  }
+
+  & .programs-choose__item {
+    margin-bottom: 14px;
   }
 }
 
@@ -150,10 +167,34 @@
   border: 0;
 
   &--contacts {
-    margin-bottom: 35px;
+    margin-bottom: 31px;
 
     @include tablet {
+      margin-bottom: 72px;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 31px;
+
+    @include tablet {
+      margin-bottom: 87px;
+    }
+
+    @include desktop {
       margin-bottom: 76px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 31px;
+
+    @include tablet {
+      margin-bottom: 54px;
+    }
+
+    @include desktop {
+      margin-bottom: 50px;
     }
   }
 
@@ -176,15 +217,23 @@
       justify-content: space-between;
       row-gap: 32px;
     }
-
-    & .programs-choose__item {
-      @include tablet {
-        margin-bottom: 0;
-        min-width: 286px;
-      }
-    }
   }
 }
+
+.programs-choose__list .programs-choose__item {
+  @include tablet {
+    margin-bottom: 0;
+    min-width: 286px;
+  }
+}
+
+.programs-choose__list--check .programs-choose__item {
+  @include desktop {
+    min-width: 245px;
+    padding-top: 9px;
+  }
+}
+
 
 .programs-choose__item {
   position: relative;
@@ -193,6 +242,10 @@
 
   @include tablet {
     padding: 5px 10px 5px 0;
+  }
+
+  @include desktop {
+    padding: 7px 10px 3px 0;
   }
 
   &:last-child {
@@ -226,7 +279,7 @@
   &--radio::before {
     @include pseudo;
     display: block;
-    top: -4px;
+    top: -7px;
     left: -45px;
     width: 30px;
     height: 30px;
@@ -258,6 +311,10 @@
       width: 40px;
       height: 40px;
     }
+
+    @include desktop {
+      top: -5px;
+    }
   }
 }
 
@@ -273,30 +330,34 @@
 
   @include tablet {
     left: -49px;
-    top: 7px;
     width: 18px;
     height: 18px;
   }
 }
 
 .programs-choose__textarea-wrapper {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 
   @include tablet {
-    margin-bottom: 65px;
+    margin-bottom: 58px;
   }
 
   @include desktop {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 }
 
 .programs-choose__textarea {
   width: 100%;
-  min-height: 175px;
+  min-height: 150px;
   margin: 0 auto;
   border: 1px solid $grey-light-3;
   padding: 14px;
+
+  @include tablet {
+    min-height: 175px;
+    padding: 9px 20px 20px;
+  }
 }
 
 .programs-choose__checkbox-wrapper {
@@ -307,7 +368,7 @@
   }
 
   @include desktop {
-    margin-bottom: 60px;
+    margin-bottom: 63px;
   }
 }
 
@@ -345,6 +406,13 @@
 
   @include desktop {
     grid-template-columns: 570px 1fr;
+    column-gap: 80px;
+  }
+
+  & .text--small {
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }
 
@@ -362,4 +430,9 @@
   font-size: 14px;
   line-height: 16px;
   color: $black-full;
+
+  @include tablet {
+    align-self: flex-start;
+    padding-top: 17px;
+  }
 }

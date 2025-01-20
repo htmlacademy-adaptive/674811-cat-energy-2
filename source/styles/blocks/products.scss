@@ -3,7 +3,7 @@
   margin-bottom: 23px;
 
   @include tablet {
-    margin-bottom: 71px;
+    margin-bottom: 70px;
   }
 
   @include desktop {
@@ -19,7 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 141px 60px;
+    gap: 142px 60px;
     padding: 0 30px;
     margin: 0 auto;
   }
@@ -124,7 +124,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
   }
 
   @include desktop {
@@ -152,7 +152,7 @@
   @include desktop {
     width: 171px;
     height: 210px;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
   }
 }
 
@@ -163,7 +163,11 @@
   @include tablet {
     order: 2;
     max-width: 135px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 25px;
   }
 
   &--more {

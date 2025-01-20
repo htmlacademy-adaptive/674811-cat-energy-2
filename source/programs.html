@@ -6,6 +6,8 @@
   <title>Подбор программы</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script src="scripts/index.js" defer></script>
 </head>
 
@@ -57,7 +59,7 @@
         <!-- Класс для обозначения ошибочного значения поля "programs-choose__label-error" -->
         <div class="programs-choose__user">
           <div class="programs-choose__wrapper-id container container--programs">
-            <label class="text text--middle-programs-label programs-choose__label">Имя:*
+            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--error">Имя:*
               <input class="input-text input-text--programs programs-choose__input" name="name" type="text" required>
             </label>
             <label class="text text--middle-programs-label programs-choose__label">Вес (кг):*
@@ -98,13 +100,13 @@
         <fieldset class="programs-choose__fieldset stripe-wrapper">
           <legend class="visually-hidden"></legend>
           <div class="programs-choose__title programs-choose__title--contacts container">
-            <h2 class="title title--section-green-stripe stripe-wrapper__title stripe-wrapper__title--programs">
+            <h2 class="title title--section-green-stripe-programs stripe-wrapper__title stripe-wrapper__title--programs">
               Контактные данные
               (владельца кота)
             </h2>
           </div>
           <div class="programs-choose__user programs-choose__user--contacts container">
-            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--mail programs-choose__label--error">E-mail:*
+            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--mail">E-mail:*
               <input class="input-text input-text--programs programs-choose__input programs-choose__input--mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="text text--middle-programs-label programs-choose__label programs-choose__label--phone">Телефон:*
@@ -114,8 +116,8 @@
         </fieldset>
         <fieldset class="programs-choose__fieldset stripe-wrapper">
           <legend class="visually-hidden"></legend>
-          <div class="programs-choose__title programs-choose__title--contacts container">
-            <h2 class="title title--section-green-stripe stripe-wrapper__title stripe-wrapper__title--programs">
+          <div class="programs-choose__title programs-choose__title--comment container">
+            <h2 class="title title--section-green-stripe-programs stripe-wrapper__title stripe-wrapper__title--programs">
               Комментарий
             </h2>
           </div>
@@ -125,8 +127,8 @@
         </fieldset>
         <fieldset class="programs-choose__fieldset stripe-wrapper">
           <legend class="visually-hidden"></legend>
-          <div class="programs-choose__title programs-choose__title--contacts container">
-            <h2 class="title title--section-green-stripe stripe-wrapper__title stripe-wrapper__title--programs">
+          <div class="programs-choose__title programs-choose__title--additional container">
+            <h2 class="title title--section-green-stripe-programs stripe-wrapper__title stripe-wrapper__title--programs">
               Дополнительно
             </h2>
           </div>
@@ -164,9 +166,9 @@
           </div>
         </fieldset>
         <div class="programs-choose__submit-wrapper container container--programs">
-          <button class="programs-choose__submit link link--green" value="отправить заявку" type="submit">отправить заявку</button>
+          <button class="programs-choose__submit link link--green link--green-promotions" value="отправить заявку" type="submit">отправить заявку</button>
           <p class="programs-choose__about-button text text--small">
-            * — Обязательные поля
+            * —Обязательные поля
           </p>
         </div>
       </form>
@@ -177,7 +179,7 @@
       <h2 class="visually-hidden">Наше местонахождение</h2>
       <div class="location__wrapper location__wrapper--index">
         <div class="location__text-wrapper container">
-          <p class="text text--middle-bigger location__text location__text--invite">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="text text--middle-bigger location__text location__text--invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="text text--small location__text location__text--adress">ул. Большая
             Конюшенная, д. 19/8
             <span class="location__text-city">Санкт-Петербург</span>

@@ -10,10 +10,6 @@
   &--close {
     @include mobile-only {
       border-bottom: 1px solid $grey-light;
-
-      .navigation__categories-list {
-        display: none;
-      }
     }
   }
 
@@ -35,6 +31,12 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;
+  }
+}
+
+.navigation--close .navigation__categories-list {
+  @include mobile-only {
+    display: none;
   }
 }
 
@@ -73,7 +75,7 @@
 
   @include tablet {
     display: flex;
-    padding-right: 5px;
+    padding-right: 2px;
   }
 
   @include desktop {

@@ -30,10 +30,6 @@
   position: relative;
   z-index: 2;
 
-  &--programs {
-    max-width: 242px;
-  }
-
   @include tablet {
     padding-left: 40px;
     max-width: fit-content;
@@ -42,5 +38,20 @@
   @include desktop {
     font-size: 40px;
     line-height: 40px;
+  }
+}
+
+.stripe-wrapper__title.stripe-wrapper__title--programs {
+  max-width: 227px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-right: 40px;
+    max-width: fit-content;
+  }
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 36px;
   }
 }
