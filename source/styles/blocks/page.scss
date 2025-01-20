@@ -1,3 +1,49 @@
 .page {
   font-family: $font-primary;
+  min-width: 300px;
+}
+
+.page__header {
+  @include tablet {
+    margin-bottom: 61px;
+  }
+
+  @include desktop {
+    margin-bottom: 68px;
+  }
+}
+
+.page__body {
+  margin: 0;
+}
+
+.page__main {
+  position: relative;
+}
+
+.page__main-title {
+  position: relative;
+
+  &--catalog {
+    margin: 0;
+    margin-bottom: 41px;
+
+    @include tablet {
+      border: 0;
+      text-align: left;
+      margin-bottom: 165px;
+    }
+
+    @include desktop {
+      margin-bottom: 165px;
+    }
+  }
+
+  &--programs {
+    margin-bottom: 54px;
+
+    @include desktop {
+      padding-left: 110px;
+    }
+  }
 }

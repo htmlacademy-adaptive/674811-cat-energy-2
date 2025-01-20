@@ -1,0 +1,38 @@
+.input-text {
+  font-family: $font-primary;
+  font-size: 20px;
+  line-height: 30px;
+  color: $grey-dark-light;
+  padding: 12px 13px;
+  border: 1px solid $grey-light-2;
+  border-radius: 0;
+  width: inherit;
+  text-transform: uppercase;
+  background-color: $white;
+
+  &:hover {
+    border-color: $grey-light-2;
+  }
+
+  &:focus {
+    outline: 1px solid $grey-dark-light;
+    border-color: $grey-dark-light;
+  }
+
+  &--programs {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 13px 15px 12px;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 29px;
+      padding: 11px;
+      padding-left: 20px;
+    }
+  }
+
+  &--textarea {
+    width: auto;
+  }
+}

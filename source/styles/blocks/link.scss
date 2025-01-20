@@ -1,3 +1,64 @@
 .link {
+  display: block;
+  font-size: 16px;
+  font-family: $font-primary;
+  line-height: 20px;
+  color: $white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
 
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--green {
+    background-color: $green-basic;
+
+    &:hover {
+      background-color: $green-link-hover;
+    }
+
+    &:active {
+      color: $white-link-active;
+    }
+  }
+
+  &--green-promotions {
+    background-color: $green-basic;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &--grey {
+    background-color: $grey-basic;
+    color: $grey-dark-light;
+    width: 100%;
+
+    &:hover {
+      background-color: $grey-light-border-2;
+    }
+
+    &:active {
+      color: rgba($color: #444444, $alpha: 0.3);
+    }
+  }
+
+  &--main-index {
+    @include tablet {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      font-size: 20px;
+      line-height: 26px;
+      padding: 14px 26px;
+    }
+  }
 }

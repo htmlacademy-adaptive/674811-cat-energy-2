@@ -1,3 +1,39 @@
 .programs {
+  position: relative;
+}
 
+.programs__subtitle {
+  margin-bottom: 39px;
+  display: block;
+
+  @include tablet {
+    margin-bottom: 66px;
+  }
+}
+
+.programs__subtitle-meaning {
+  display: block;
+  max-width: 226px;
+
+  @include tablet {
+    max-width: inherit;
+    padding-right: 308px;
+  }
+
+  @include desktop {
+    max-width: 323px;
+    padding-right: 0;
+  }
+}
+
+.programs__form {
+  padding-bottom: 32px;
+
+  @include tablet {
+    padding-bottom: 60px;
+  }
+
+  @include desktop {
+    padding-bottom: 77px;
+  }
 }

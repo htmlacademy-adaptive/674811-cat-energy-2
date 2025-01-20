@@ -7,3 +7,45 @@
     src: $font-src;
   }
 }
+
+@mixin list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin mobile-only {
+  @media (max-width: $mobile-only-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin grey-border {
+  border: 1px solid $grey-light-border;
+}
+
+@mixin link {
+  text-decoration: none;
+}

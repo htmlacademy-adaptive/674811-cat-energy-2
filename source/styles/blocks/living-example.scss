@@ -1,3 +1,267 @@
 .living-example {
+  background-color: $grey-middle-dark;
+  padding-top: 25px;
+  padding-bottom: 35px;
 
+  @include tablet {
+    padding-top: 43px;
+    padding-bottom: 96px;
+    background-image: linear-gradient(to bottom, $white 619px, $grey-middle-dark 619px);
+    border-top: 1px solid $grey-light;
+  }
+
+  @include desktop {
+    background-color: $grey-middle-dark;
+    background-image: linear-gradient(to bottom, $white 136px, $grey-basic 136px);
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 76px;
+  }
+}
+
+.living-example__section-wrapper {
+  padding-top: 2px;
+
+  @include desktop {
+    display: flex;
+    border: 0;
+    justify-content: space-between;
+  }
+}
+
+.living-example__wrapper {
+  @include desktop {
+    max-width: 433px;
+  }
+}
+
+.living-example__title {
+  margin: 0;
+  margin-bottom: 42px;
+  text-align: left;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    margin-bottom: 146px;
+  }
+}
+
+.living-example__story {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 55px;
+  }
+
+  @include desktop {
+    margin-bottom: 69px;
+  }
+}
+
+.living-example__information {
+  margin-bottom: 20px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 102px;
+  }
+
+  @include desktop {
+    flex-wrap: wrap;
+    row-gap: 57px;
+    margin-bottom: 0;
+  }
+}
+
+.living-example__information-list {
+  margin: 0;
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    display: flex;
+    column-gap: 43px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    column-gap: 42px;
+  }
+}
+
+.living-example__information-wrapper {
+  display: block;
+  padding: 13px 0;
+  border: 1px solid $grey-light-2;
+  border-radius: 3px;
+  position: relative;
+  min-width: 124px;
+
+  @include tablet {
+    min-width: 162px;
+    padding: 15px 0 20px;
+  }
+}
+
+.living-example__information-meaning {
+  text-align: center;
+}
+
+.living-example__information-description {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: inline-block;
+  background-color: $grey-middle-dark;
+  max-width: 87px;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
+  text-transform: lowercase;
+
+  @include tablet {
+    background-color: $white;
+    min-width: 116px;
+    top: 63px;
+  }
+
+  @include desktop {
+    background-color: $grey-basic;
+  }
+
+  &--time {
+    @include tablet {
+      min-width: 145px;
+    }
+  }
+}
+
+.living-example__final-price {
+  text-align: center;
+  margin: 0;
+
+  @include tablet {
+    padding-top: 11px;
+    max-width: 174px;
+    text-align: right;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    max-width: none;
+  }
+}
+
+.living-example__final-price-meaning {
+  @include tablet {
+    display: inline-block;
+    padding-top: 9px;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    margin-left: 63px;
+  }
+}
+
+.living-example__slider-wrapper {
+  max-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+
+  @include tablet {
+    max-width: 560px;
+  }
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.living-example__slider-img-wrapper {
+  position: relative;
+
+  &--fat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    background-color: $grey-middle-dark;
+    z-index: 10;
+
+    @include tablet {
+      background-color: transparent;
+      background-image: linear-gradient(to bottom, $white 135px, transparent 135px);
+    }
+  }
+}
+
+.living-example__slider-img {
+  overflow: hidden;
+  max-width: none;
+}
+
+.living-example__slider-button {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 2px);
+  width: 0;
+  height: 257px;
+  border: 2px solid $grey-dark-light-2;
+  border-radius: 2px;
+  padding: 0;
+  z-index: 10;
+
+  @include tablet {
+    height: 512px;
+  }
+
+  &::before {
+    @include pseudo;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border: 2px solid $grey-dark-light-2;
+    background-color: $white;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo;
+    top: calc(50% - 9px);
+    left: calc(50% - 12px);
+    background-color: $grey-dark-light-2;
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../icons/stack.svg#slider-thumb");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:hover {
+    border-color: $green-basic;
+
+    &::before {
+      border-color: $green-basic;
+    }
+
+    &::after {
+      background-color: $green-basic;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

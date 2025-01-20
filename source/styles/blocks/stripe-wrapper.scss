@@ -1,0 +1,57 @@
+.stripe-wrapper {
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    top: 12px;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $green-basic;
+    z-index: 2;
+
+    @include tablet {
+      top: 16px;
+    }
+
+    @include desktop {
+      top: 20px;
+    }
+  }
+}
+
+.stripe-wrapper__title {
+  display: inline-block;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 40px;
+  background-color: $white;
+  position: relative;
+  z-index: 2;
+
+  @include tablet {
+    padding-left: 40px;
+    max-width: fit-content;
+  }
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.stripe-wrapper__title.stripe-wrapper__title--programs {
+  max-width: 227px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-right: 40px;
+    max-width: fit-content;
+  }
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
