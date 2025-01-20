@@ -19,7 +19,7 @@
   position: relative;
 
   @include tablet {
-    padding: 77px 63px 53px 52px;
+    padding: 77px 63px 56px 52px;
     margin-bottom: 30px;
   }
 
@@ -27,7 +27,7 @@
     margin-bottom: 0;
     min-width: 570px;
     padding-right: 61px;
-    padding-bottom: 55px;
+    padding-bottom: 59px;
   }
 
   &:last-child {
@@ -102,7 +102,7 @@
       width: 268px;
       height: 112px;
       top: 135px;
-      right: 29px;
+      right: 25px;
       left: auto;
     }
 
@@ -141,12 +141,13 @@
   @include tablet {
     border: 0;
     padding-bottom: 0;
-    margin-bottom: 47px;
+    margin-bottom: 53px;
     max-width: 340px;
   }
 
   @include desktop {
     max-width: 457px;
+    margin-bottom: 28px;
   }
 }
 
@@ -171,12 +172,16 @@
 .modes__link::after {
   @include pseudo;
   background-image: url("../../icons/stack.svg#programs-arrow-long");
-  background-position-x: -8px;
+  background-position-x: -7px;
   background-repeat: no-repeat;
-  width: 32px;
+  width: 35px;
   height: 10px;
   display: block;
   top: calc(50% - 6px);
-  right: 0;
+  right: 5px;
   transition: 0.4s;
+
+  @include tablet {
+    right: -4px;
+  }
 }

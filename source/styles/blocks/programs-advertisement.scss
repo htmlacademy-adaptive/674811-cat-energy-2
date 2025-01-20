@@ -18,7 +18,7 @@
     padding-right: 30px;
     background-image: none;
     background-color: $white;
-    min-height: 805px;
+    min-height: 810px;
     margin-bottom: 0;
   }
 
@@ -28,7 +28,7 @@
     padding-right: 110px;
     min-height: auto;
     padding-bottom: 44px;
-    margin-bottom: 82px;
+    margin-bottom: 89px;
   }
 }
 
@@ -41,7 +41,7 @@
 
   @include desktop {
     position: relative;
-    padding-top: 110px;
+    padding-top: 83px;
     min-height: 500px;
   }
 }
@@ -49,8 +49,10 @@
 .programs-advertisement__title {
   margin-top: 0;
   margin-bottom: 25px;
+  text-align: center;
 
   @include tablet {
+    text-align: left;
     margin-bottom: 40px;
     max-width: 577px;
   }
@@ -79,8 +81,10 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 3px;
 
   @include tablet {
+    margin-bottom: 0;
     width: 709px;
     height: 609px;
     position: absolute;
@@ -93,6 +97,6 @@
     width: 552px;
     height: 499px;
     bottom: 0;
-    left: calc(50% - 200px);
+    left: calc(50% - 203px);
   }
 }

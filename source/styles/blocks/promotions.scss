@@ -3,12 +3,16 @@
   margin-bottom: 40px;
 
   @include tablet {
-    margin-bottom: 104px;
+    margin-bottom: 81px;
+  }
+
+  @include desktop {
+    margin-bottom: 105px;
   }
 }
 
 .promotions__title {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   padding-left: 0;
 
   @include tablet {
@@ -17,7 +21,7 @@
   }
 
   @include desktop {
-    margin-bottom: 72px;
+    margin-bottom: 71px;
     padding-left: 70px;
   }
 }
@@ -36,6 +40,10 @@
   margin: 0;
   margin-bottom: 24px;
   text-align: center;
+
+  @include tablet {
+    margin-bottom: 22px;
+  }
 }
 
 .promotions__subscribe-form {

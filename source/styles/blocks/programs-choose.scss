@@ -206,8 +206,11 @@
       padding-left: 60px;
     }
 
-    &:hover .programs-choose__mark::before,
-    .programs-choose__mark--checkbox {
+    &:hover .programs-choose__mark::before {
+      border-color: $grey-light-4;
+    }
+
+    &:hover .programs-choose__mark--checkbox {
       border-color: $grey-light-4;
     }
 

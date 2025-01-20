@@ -31,10 +31,10 @@
   padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
-  column-gap: 14px;
+  column-gap: 12px;
 
   @include tablet {
-    padding: 61px 70px;
+    padding: 60px 70px;
   }
 
   @include desktop {
@@ -46,6 +46,7 @@
     min-height: 198px;
     background-color: $white;
     z-index: 10;
+    padding: 60px 80px;
   }
 }
 
@@ -69,6 +70,18 @@
       justify-content: space-between;
       max-width: 193px;
       text-align: right;
+      row-gap: 20px;
+    }
+
+    @include desktop {
+      text-align: left;
+      max-width: 157px;
+    }
+  }
+
+  &--city {
+    @include tablet {
+      margin-top: 19px;
     }
   }
 }

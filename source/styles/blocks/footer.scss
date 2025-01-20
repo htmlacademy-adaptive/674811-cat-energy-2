@@ -16,7 +16,7 @@
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 55px;
+    padding-top: 56px;
     padding-bottom: 55px;
   }
 
@@ -78,7 +78,7 @@
   font-family: $font-secondary;
   color: $grey-dark-light;
   width: 100%;
-  padding-top: 8px;
+  padding-top: 5px;
   position: relative;
 
   &::after {
@@ -86,9 +86,13 @@
     width: 27px;
     height: 34px;
     background-color: $grey-dark-light-2;
-    top: 0;
+    top: -2px;
     right: 0;
     mask-image: url("../../icons/stack.svg#html-academy");
+
+    @include tablet {
+      top: 0;
+    }
   }
 
   &:hover,
@@ -103,6 +107,7 @@
   }
 
   @include tablet {
-    max-width: 168px;
+    padding-top: 7px;
+    max-width: 162px;
   }
 }
