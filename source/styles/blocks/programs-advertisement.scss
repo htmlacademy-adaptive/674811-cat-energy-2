@@ -1,0 +1,102 @@
+.programs-advertisement {
+  background-image: linear-gradient(to bottom, rgba(104, 184, 56, 0.85) 302px, $white 302px), url("../../images/index-background-mobile@2x.jpg");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 27px;
+  margin-bottom: 20px;
+
+  @include mobile-only {
+    background-color: $grey-img-background;
+  }
+
+  @include tablet {
+    padding-top: 0;
+    padding-left: 120px;
+    padding-right: 30px;
+    background-image: none;
+    background-color: $white;
+    min-height: 810px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    background-color: transparent;
+    padding-left: 190px;
+    padding-right: 110px;
+    min-height: auto;
+    padding-bottom: 44px;
+    margin-bottom: 89px;
+  }
+}
+
+.programs-advertisement__wrapper {
+  display: block;
+
+  @include tablet {
+    padding: 0;
+  }
+
+  @include desktop {
+    position: relative;
+    padding-top: 83px;
+    min-height: 500px;
+  }
+}
+
+.programs-advertisement__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+    margin-bottom: 40px;
+    max-width: 577px;
+  }
+
+  @include desktop {
+    max-width: 475px;
+  }
+}
+
+.programs-advertisement__slogan {
+  margin-top: 0;
+  margin-bottom: 29px;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    max-width: 475px;
+  }
+}
+
+.programs-advertisement__image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3px;
+
+  @include tablet {
+    margin-bottom: 0;
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    z-index: 0;
+  }
+
+  @include desktop {
+    width: 552px;
+    height: 499px;
+    bottom: 0;
+    left: calc(50% - 203px);
+  }
+}

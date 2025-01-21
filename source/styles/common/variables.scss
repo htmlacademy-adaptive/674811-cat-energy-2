@@ -1,1 +1,44 @@
 /* здесь используйте глобальные переменные */
+/* Переменные шрифтов */
+$font-primary: "Oswald", "Arial", sans-serif;
+$font-secondary: "Lato", "Arial", sans-serif;
+
+/* Ширины экранов */
+//mobile
+$mobile-width: 320px;
+$mobile-only-width: 767px;
+//tablet
+$tablet-width: 768px;
+$tablet-only-width: 1439px;
+//desktop
+$desktop-width: 1440px;
+
+/* Перменные цветов */
+//green
+$green-basic: #68b738;
+$green-background-additionla-goods: #67ab3f;
+$green-link-hover: #5eaa2f;
+//black
+$black-full: #000000;
+$black-lighter: #111111;
+$black-lighter-catalog: #222222;
+$black-hover: #3e3e3e;
+$black-active: #6b6b6b;
+//white
+$white: #ffffff;
+$white-link-active: rgba(255, 255, 255, 0.3);
+//grey
+$grey-catalog-more: #d3d3d3;
+$grey-light-border: #d9d9d9;
+$grey-light-border-2: #ebebeb;
+$grey-basic: #f2f2f2;
+$grey-light: #e6e6e6;
+$grey-light-2: #cdcdcd;
+$grey-light-3: #e7e7e7;
+$grey-light-4: #bababa;
+$grey-middle-dark: #eaeaea;
+$grey-dark-light: #444444;
+$grey-dark-light-2: #666666;
+$grey-img-background: #4e4d53;
+//red
+$red-error:#ff8282;

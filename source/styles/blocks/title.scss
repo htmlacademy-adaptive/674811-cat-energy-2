@@ -1,0 +1,77 @@
+.title {
+  font-weight: 400;
+
+  &--section {
+    line-height: 36px;
+    font-size: 36px;
+
+    @include tablet {
+      text-align: left;
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &--section-green-stripe {
+    font-size: 24px;
+    line-height: 24px;
+
+    @include tablet {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    @include desktop {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &--section-green-stripe-programs {
+    font-size: 24px;
+    line-height: 24px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    @include desktop {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &--page-main {
+    padding-top: 27px;
+    line-height: 36px;
+    font-size: 36px;
+
+    @include tablet {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 60px;
+      line-height: 60px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--middle {
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $black-full;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &--main-index {
+    @include mobile-only {
+      color: $white;
+    }
+  }
+}

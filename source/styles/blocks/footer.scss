@@ -1,0 +1,113 @@
+.footer {
+  position: relative;
+}
+
+.footer__wrapper-background {
+  background-color: $grey-basic;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 56px;
+    padding-bottom: 55px;
+  }
+
+  @include desktop {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+.footer__logo-link {
+  height: 24px;
+  display: block;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $black-hover;
+  }
+
+  &:active {
+    fill: $black-active;
+  }
+}
+
+.footer__link-academy-name {
+  position: relative;
+
+  &:hover {
+    & + .footer__link-academy-logo {
+      fill: $green-basic;
+    }
+  }
+}
+
+.footer__link-academy-logo {
+  @include tablet {
+    height: 37px;
+  }
+}
+
+.footer__socials-list {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.footer__wrapper-link {
+  @include link;
+  display: inline-block;
+  height: 34px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $font-secondary;
+  color: $grey-dark-light;
+  width: 100%;
+  padding-top: 5px;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    width: 27px;
+    height: 34px;
+    background-color: $grey-dark-light-2;
+    top: -2px;
+    right: 0;
+    mask-image: url("../../icons/stack.svg#html-academy");
+
+    @include tablet {
+      top: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: $green-basic;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    padding-top: 7px;
+    max-width: 162px;
+  }
+}
