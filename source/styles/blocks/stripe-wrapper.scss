@@ -19,6 +19,12 @@
       top: 20px;
     }
   }
+
+  &--programs::before {
+    @include tablet {
+      top: 22px;
+    }
+  }
 }
 
 .stripe-wrapper__title {

@@ -61,4 +61,13 @@
       padding: 14px 26px;
     }
   }
+
+  &--green-programs-form {
+    @include tablet {
+      font-size: 20px;
+      line-height: 26px;
+      padding-top: 15px;
+      padding-bottom: 14px;
+    }
+  }
 }

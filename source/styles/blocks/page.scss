@@ -40,7 +40,11 @@
   }
 
   &--programs {
-    margin-bottom: 54px;
+    margin-bottom: 36px;
+
+    @include tablet {
+      margin-bottom: 54px;
+    }
 
     @include desktop {
       padding-left: 110px;

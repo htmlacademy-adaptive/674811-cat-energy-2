@@ -3,7 +3,7 @@
 }
 
 .programs-choose__user {
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 
   &--contacts {
     .programs-choose__label::after {
@@ -62,7 +62,7 @@
 .programs-choose__label {
   display: flex;
   margin-bottom: 14px;
-  column-gap: 13px;
+  column-gap: 11px;
   max-width: 100%;
   align-items: center;
   position: relative;
@@ -129,21 +129,22 @@
   position: relative;
 }
 
+.programs-choose__label--checkbox .programs-choose__checkbox-input:disabled + .programs-choose__mark,
+.programs-choose__label--radio .programs-choose__radio-input:disabled + .programs-choose__mark {
+  opacity: 0.3;
+}
+
 .programs-choose__fieldset {
   border: 0;
   margin: 0;
   padding: 0;
   position: relative;
-
-  &.stripe-wrapper::before {
-    top: 23px;
-  }
 }
 
 .programs-choose__fieldset.programs-choose__fieldset--radio {
   border-top: 1px solid $grey-light-border;
   border-bottom: 1px solid $grey-light-border;
-  padding: 19px 20px;
+  padding: 20px 20px 4px;
 
   @include tablet {
     border: 1px solid $grey-light-border;
@@ -270,6 +271,25 @@
     &:active {
       opacity: 0.3;
     }
+
+    &:focus-within.programs-choose__label::before {
+      @include pseudo;
+      outline: 1px solid $black-full;
+      width: 100%;
+      height: 35px;
+      display: block;
+      top: -9px;
+      left: 0;
+
+      @include tablet {
+        height: 42px;
+        top: -4px;
+      }
+
+      @include desktop {
+        top: -6px;
+      }
+    }
   }
 }
 
@@ -294,11 +314,11 @@
     }
   }
 
-  &--checkbox {
+  &--checkbox::before {
+    @include pseudo;
     display: block;
-    position: absolute;
-    top: -6px;
-    left: 0;
+    top: -5px;
+    left: -45px;
     width: 30px;
     height: 30px;
     border: 1px solid $grey-light-2;
@@ -306,7 +326,7 @@
     z-index: 0;
 
     @include tablet {
-      left: 0;
+      left: -60px;
       top: -3px;
       width: 40px;
       height: 40px;
@@ -336,7 +356,7 @@
 }
 
 .programs-choose__textarea-wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   @include tablet {
     margin-bottom: 58px;
@@ -361,7 +381,7 @@
 }
 
 .programs-choose__checkbox-wrapper {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 
   @include tablet {
     margin-bottom: 52px;
@@ -374,8 +394,8 @@
 
 .programs-choose__checkbox-input[type="checkbox"]:checked + .programs-choose__mark--checkbox::after {
   @include pseudo;
-  top: 6px;
-  left: 5px;
+  top: 2px;
+  left: -38px;
   width: 18px;
   height: 14px;
   background-repeat: no-repeat;
@@ -387,8 +407,8 @@
   @include tablet {
     width: 24px;
     height: 19px;
-    top: 11px;
-    left: 8px;
+    top: 6px;
+    left: -50px;
   }
 }
 
