@@ -11,6 +11,12 @@
   @include desktop {
     margin-bottom: 68px;
   }
+
+  &--index {
+    @include desktop {
+      margin-bottom: 21px;
+    }
+  }
 }
 
 .page__body {

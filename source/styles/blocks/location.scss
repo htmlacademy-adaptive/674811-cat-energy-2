@@ -46,7 +46,7 @@
     min-height: 198px;
     background-color: $white;
     z-index: 10;
-    padding: 60px 80px;
+    padding: 60px 80px 40px;
   }
 }
 
@@ -76,12 +76,7 @@
     @include desktop {
       text-align: left;
       max-width: 157px;
-    }
-  }
-
-  &--city {
-    @include tablet {
-      margin-top: 19px;
+      align-self: flex-start;
     }
   }
 }

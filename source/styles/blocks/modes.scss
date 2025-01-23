@@ -107,9 +107,9 @@
     }
 
     @include desktop {
-      width: 134px;
+      width: 139px;
       height: 56px;
-      top: 67px;
+      top: 68px;
       left: 33px;
     }
   }
@@ -155,13 +155,11 @@
   position: relative;
   padding-right: 57px;
 
-  &.modes__link:hover {
-    &.modes__link::after {
-      width: 32px;
-      height: 10px;
-      transition: 0.2s;
-      background-position-x: -2px;
-    }
+  &:hover::after {
+    width: 32px;
+    height: 10px;
+    transition: 0.2s;
+    background-position-x: -2px;
   }
 
   &:active {
