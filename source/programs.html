@@ -59,14 +59,23 @@
         <!-- Класс для обозначения ошибочного значения поля "programs-choose__label-error" -->
         <div class="programs-choose__user">
           <div class="programs-choose__wrapper-id container container--programs">
-            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--error">Имя:*
-              <input class="input-text input-text--programs programs-choose__input" name="name" type="text" required>
+            <label class="text text--middle-programs-label programs-choose__label">
+              <span class="programs-choose__label-text">
+                Имя:*
+              </span>
+              <input class="input-text input-text--programs programs-choose__input" name="name" type="text" placeholder="Барсик" required>
             </label>
-            <label class="text text--middle-programs-label programs-choose__label">Вес (кг):*
-              <input class="input-text input-text--programs programs-choose__input" name="weight" type="number" required>
+            <label class="text text--middle-programs-label programs-choose__label">
+              <span class="programs-choose__label-text">
+                Вес&nbsp;(кг):*
+              </span>
+              <input class="input-text input-text--programs programs-choose__input" name="weight" type="number" placeholder="7" required>
             </label>
-            <label class="text text--middle-programs-label programs-choose__label">Возраст (лет):
-              <input class="input-text input-text--programs programs-choose__input" name="old" type="number">
+            <label class="text text--middle-programs-label programs-choose__label">
+              <span class="programs-choose__label-text">
+                Возраст&nbsp;(лет):
+              </span>
+              <input class="input-text input-text--programs programs-choose__input" name="old" type="number" placeholder="7">
             </label>
           </div>
           <fieldset class="programs-choose__fieldset programs-choose__fieldset--radio">
@@ -106,10 +115,16 @@
             </h2>
           </div>
           <div class="programs-choose__user programs-choose__user--contacts container">
-            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--mail">E-mail:*
+            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--mail">
+              <span class="programs-choose__label-text">
+                E-mail:*
+              </span>
               <input class="input-text input-text--programs programs-choose__input programs-choose__input--mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--phone">Телефон:*
+            <label class="text text--middle-programs-label programs-choose__label programs-choose__label--phone">
+              <span class="programs-choose__label-text">
+                Телефон:*
+              </span>
               <input class="input-text input-text--programs programs-choose__input programs-choose__input--phone" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
             </label>
           </div>

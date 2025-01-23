@@ -23,6 +23,7 @@
     font-size: 16px;
     line-height: 18px;
     padding: 13px 15px 12px;
+    min-width: 173px;
 
     @include tablet {
       font-size: 20px;

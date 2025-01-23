@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Cat Energy</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="favicons/favicon-32x32.png" type="image/png">
-
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="container header header--index page__header">
+  <header class="container header header--index page__header page__header--index">
     <h1 class="visually-hidden">Магазин питания для кошек Cat energy</h1>
-    <nav class="navigation navigation--close header__site-navigation">
+    <!-- Классы для тега nav: для закрытия выпадаюшего меню класс "navigation--close", для активного состояния "navigation--open" -->
+    <nav class="navigation navigation--close navigation--index header__site-navigation">
       <a class="navigation__menu-link navigation__menu-link--logo" href="#">
         <picture>
           <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/header-logo-desktop.svg" width="202" height="59">
@@ -156,7 +157,7 @@
       <div class="footer__wrapper container">
         <a class="footer__logo-link" href="#" aria-label="Название магазина">
           <svg width="128" height="24" viewBox="0 0 128 24" role="img">
-            <use href="./icons/stack.svg#footer-logo-words"></use>
+            <use href="./icons/stack.svg#footer-logo"></use>
           </svg>
         </a>
         <ul class="footer__socials-list socials">
@@ -171,7 +172,12 @@
           </li>
         </ul>
         <a class="footer__wrapper-link" href="#">
-          <span class="footer__link-academy-name">HTML Academy</span>
+          <span class="footer__link-academy-name">
+            HTML Academy
+          </span>
+          <svg class="footer__link-academy-logo" width="27" height="34" viewBox="0 0 27 34" role="img">
+            <use href="./icons/stack.svg#html-academy"></use>
+          </svg>
         </a>
       </div>
     </div>

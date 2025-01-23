@@ -5,7 +5,13 @@
   font-size: 20px;
   line-height: 20px;
   background-color: $white;
+  border-bottom: 1px solid $grey-light;
 
+  &--index {
+    @include mobile-only {
+      border-bottom: 0;
+    }
+  }
 
   &--close {
     @include mobile-only {
@@ -28,6 +34,7 @@
   }
 
   @include tablet {
+    border-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
     background-color: transparent;
@@ -63,7 +70,7 @@
     z-index: 10;
     background-color: $white;
     width: 100%;
-    top: 67px;
+    top: 65px;
   }
 }
 
@@ -254,15 +261,3 @@
   top: 7px;
   transform: rotate(-45deg);
 }
-
-/* Для JS
-.navigation__button-close:active::before {
-  transform: rotate(45deg);
-  transition: transform 0.3s 0.15s;
-}
-
-.navigation__button-close..navigation__button-close--active::after {
-  transform: rotate(-45deg);
-  transition: transform 0.3s 0.15s;
-}
-*/

@@ -62,7 +62,6 @@
 .programs-choose__label {
   display: flex;
   margin-bottom: 14px;
-  column-gap: 11px;
   max-width: 100%;
   align-items: center;
   position: relative;
@@ -121,6 +120,14 @@
     @include desktop {
       min-width: 200px;
     }
+  }
+}
+
+.programs-choose__label-text {
+  margin-right: 11px;
+
+  @include tablet {
+    margin-right: 14px;
   }
 }
 
@@ -268,10 +275,6 @@
       border-color: $grey-light-4;
     }
 
-    &:active {
-      opacity: 0.3;
-    }
-
     &:focus-within.programs-choose__label::before {
       @include pseudo;
       outline: 1px solid $black-full;
@@ -341,7 +344,7 @@
 .programs-choose__radio-input[type="radio"]:checked + .programs-choose__mark--radio::after {
   @include pseudo;
   display: block;
-  top: 4px;
+  top: 2px;
   left: -36px;
   width: 13px;
   height: 13px;
@@ -352,6 +355,7 @@
     left: -49px;
     width: 18px;
     height: 18px;
+    top: 4px;
   }
 }
 
