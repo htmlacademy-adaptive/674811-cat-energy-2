@@ -15,7 +15,7 @@
 
   &--close {
     @include mobile-only {
-      border-bottom: 1px solid $grey-light;
+      border-bottom: 0;
     }
   }
 
