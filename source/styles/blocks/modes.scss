@@ -93,16 +93,16 @@
     @include pseudo;
     display: block;
     background-image: url("../../icons/stack.svg#programs-mobile-cat-strong");
-    width: 67px;
+    width: 70px;
     height: 28px;
-    top: 35px;
+    top: 34px;
     left: 12px;
 
     @include tablet {
-      width: 268px;
+      width: 280px;
       height: 112px;
       top: 135px;
-      right: 25px;
+      right: 18px;
       left: auto;
     }
 
